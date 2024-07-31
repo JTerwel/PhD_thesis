@@ -1,0 +1,8 @@
+\standalonepreambles
+\subpreamble{chapter_1/introduction.tex}
+\usepackage {setspace}
+\endsubpreamble
+\subpreamble{chapter_2/observing.tex}
+\usepackage {setspace}
+\endsubpreamble
+\endstandalonepreambles

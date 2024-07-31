@@ -1,0 +1,92 @@
+This file is for making personal notes. It will not be used when compiling the thesis
+
+Main style version adapted from Pearse Murphy (https://github.com/murphp30/thesis/tree/main), a previous PhD student from Trinity who got it from others before him. To whoever uses my version in the future as a base model, please take advantage of it, keep spreading it to the next person afterwards, and above all enjoy the process.
+
+To add a section to the full thesis do something like: \include{chapter_1/introduction}
+
+back referencing from tables and figures should be taken care of automatically, just add [...name...] to the caption to name it in the list of figures / tables
+
+To make chapters compilable without compiling everything (makes stuff faster, but format changes slightly) the chapter files need to look like this (check https://www.overleaf.com/learn/latex/Multi-file_LaTeX_projects):
+%!TEX root = ../main.tex
+\documentclass[a4paper,oneside,12pt, class=Latex/Classes/PhDthesisPSnPDF, crop=false]{standalone}
+\usepackage{setspace}
+\begin{document}
+\doublespacing
+\chapter{...chapter name...}
+\label{...chapter label...}
+...text...
+\end{document}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+% THESIS PLAN & LAYOUT %
+%%%%%%%%%%%%%%%%%%%%%%%%
+Chapter 1: Introduction
+  |- Section 1: The final stages of stars
+  |        General introduction to stellar remnants & SNe
+  |- Section 2: Type Ia SNe
+  |        Type Ia in general & subclasses, introduce progenitor problem
+  |- Section 3: The Ia-CSM subclass
+  |        Ia-CSM in general, SN 2015cp & late interaction,
+  |        systematic blind spot for late interactions, define aim of the search
+Chapter 2: Observing in the optical regime / techniques (SHORTEN THIS SIGNIFICANTLY, ONLY ADD WHAT IS NEEDED AND USED IN THE PAPERS!!!)
+  |- Section 1: General considerations (Loc, tel, inst, det)
+  |- Section 2: Observing (and reduction or own section?)
+  |             Not a deep dive but enough to explain the NOT obs in real-time paper
+  |             Find some good books to refer to for the deeper dive
+  |- Section 3: Analysis (with reduction here?)
+  |             similar overview style as section 2
+  |             Geared towards transients: classifications, cite (some) of mine
+  |             Also explain difference imaging and forced photometry a bit as all the ZTF data comes through that
+  |- Section 4(?): Techniques (SNAP, simulations / introduce simsurvey) (Own small chapter?)
+
+%%% OLD %%%
+%  |        (Leave NIR & polarimetry be for now as I don't really use them in my thesis anyway)
+%  |        Try to be general, but use specific examples from ZTF, INT, NOT, NTT, LT
+%  |- Section 1: Location, Telescope, Instrument, CCD
+%  |        Quick global overview of general considerations when wanting to observe
+%  |        put something in about CCD readout as that'll be needed later
+%  |- Section 2: Imaging / photometry
+%  |        Quick low level step by step guide of general things to do & why they're needed
+%  |        e.g. guiding, blind offset, estimating overhead time when planning nights, moon issues
+%  |- Section 3: Spectroscopy
+%  |        Similar in setup as section 2 but focus on extra steps/considerations needed
+%  |        e.g. arcs after target, position angle
+%  |- Section 4: Reduction
+%  |        Quick overview of steps needed and why, not too detailed
+%  |- Section 5: Analysis
+%  |        Photometry (aperture, psf, forced, scene modelling)
+%  |        Spectral classification (ref some TNS reports?)
+%  |        Advanced methods: Difference imaging (Focus on ZTF with this)
+%%% OLD %%%
+
+Chapter 3: A systematic search for late-time rebrightening: The pipeline
+  |- Section 1: Goals & pitfalls
+  |        Why use binning, what can it detect, how to remove false positives
+  |- Section 2: Sample selection & pre-processing
+  |        Either introduce the 3 samples here or set criteria for a good sample
+  |        Describe pre-processing in detail (basically everything that is done in __init__())
+  |- Section 3: Binning & filtering
+  |        Describe how it is done
+  |        Describe tail fit need
+  |        Split into 2 sections?
+  |- Section 4: Output & final analysis
+  |        What does the pipeline produce?
+  |        What to look for in flagged objects & describe tools used (e.g. SNAP)
+Chapter 4: A systematic search for late-time rebrightening: The simulations
+  |- Section 1: Testing the pipeline
+  |        Explain the simulations in detail & how they were used to test the pipeline
+  |- Section 2: Further uses
+  |        How can the simulations be used for a rough rate estimation?
+  |        Place it here or in the DR2 bit where it is actually used?
+Chapter 5: The DR2 sample
+  |        The remainder of the DR2 paper
+Chapter 6: Real-time monitoring using ZTF
+  |        The real-time sample / paper
+Chapter 7: The older generation
+  |        The pre-ZTF sample / paper
+Chapter 8: The next steps
+  |        Future research to build from this
+  |        Alternative uses for a pipeline like this
+  |        Improvements to the pipeline
+  |        Alternative strategies for searching events like these (If I can think of good ways)
