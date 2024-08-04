@@ -5,4 +5,7 @@
 \subpreamble{chapter_2/observing.tex}
 \usepackage {setspace}
 \endsubpreamble
+\subpreamble{chapter_3/analysis.tex}
+\usepackage {setspace}
+\endsubpreamble
 \endstandalonepreambles

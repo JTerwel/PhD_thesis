@@ -1,0 +1,54 @@
+%!TEX root = ../main.tex
+\documentclass[a4paper,oneside,12pt, class=Latex/Classes/PhDthesisPSnPDF, crop=false]{standalone}
+\usepackage{setspace}
+\begin{document}
+\doublespacing
+\chapter{Analysis techniques}
+\label{chap:analysis}
+
+
+After all observations have been taken it is time to analyze them. The first step in this is to reduce the raw data into the required format to work with. After that, additional analysis technique can manipulate the reduced images directly or the data that has been extracted from them. I will briefly discuss difference imaging and forced photometry, as these are important for this thesis. \color{red} More techniques that need discussion? Might want to make this its own chapter separate from observing.\color{black}
+
+\section{Reduction}
+\label{reduction}
+
+\color{red} copied, not edited yet \color{black}
+To get the cleanest signals it is important to reduce noise as much as possible. Several sources of noise originating from the instrument can be removed using different types of calibration images. Generally speaking there are three types of calibration images for photometry, and one extra for spectroscopy. The response function of a detector can be written as \color{red} Probably good to go over with someone at some point to be sure there's no mistake here, also need references of course. make sure CCD is properly introduced somewhere above. Need to talk about gain and read noise as well somewhere, read up on that and add. \color{black}
+
+\begin{equation}
+	R_{ij}(F, t) = B_{ij} + D_{ij} \times t + A_{ij} \times F,
+	\label{CCD_response}
+\end{equation}
+
+where $R_{ij}$ is the CCD response of pixel $i,j$ as a function of the integrated flux $F$ during the exposure which lasted a time $t$. The goal is to measure the flux $f = F/t$, which requires knowing $A_{ij}$, $B_{ij}$, and $D_{ij}$. Each type of calibration image is used to measure one of these values. Note that it is assumed that there are no cross or higher order terms in Eq.~\ref{CCD_response}, in other words, the CCD is in its linear regime. When a pixel receives too much light and gets close to saturation it is no longer in its linear regime, and more terms appear in Eq.~\ref{CCD_response} making it much more difficult or even impossible to measure the observed flux.
+
+
+Using the calibration images from above, the raw science images can be reduced to something a flux level can be measured from. Usually several calibration images of a type are taken to average out and remove outliers due to e.g. cosmic rays, which is usually called the master image. First the master-bias is created and subtracted from every other image. Then the same can be done with the master-dark if needed. Lastly every science image is divided through the normalized master-flat to equalize the pixel responses. Once the images are reduced it is often good practice to run a cosmic-ray removal algorith to remove this source of noise as much as possible \color{red} Check name and add references \color{black}.
+
+If multiple images are taken of the same field or object. one can stack them at this stage do reduce noise and increase the SNR of the observed objects. Sometimes the observations were taken with slightly different telescope pointings (dithering) to avoid the same objects being on the same pixels every time. This is good to keep in mind to make sure that the images are stacked correctly.
+
+With photometry the observed brightness can be measured for each star in the image to get a list of instrument magnitudes. The relative differences between the magnitudes of objects are correct, but there is still an absolute offset across all objects. This is corrected by comparing with known values from the literature.
+
+For spectroscopy, after the calibrations above the wavelength solution is added in the spectral direction of the image. The trace is extracted and converted into a 1D spectrum, but is not yet calibrated for the detector efficiency at different wavelengths. This is where the standard star comes in. By comparing the observed spectrum to the known one, the detector wavelength response function can be recovered. Applying this to the science observation provides the flux calibration, ensuring that the observed flux at different wavelengths can be compared.
+
+\section{Difference imaging}
+A popular method for discovering and isolating transients is to look at what has changed on the sky. If there is a map of how a part of the sky looked some time ago, the constant sources such as most stars (except variable ones) and galaxies can be removed. To computers, images are nothing more than big matrices. This means that, if properly aligned, subtracting the reference from the science images is an easy operation that leaves only those sources whose brigthness has changed between the two observations in the so-called difference image. This also ensures that only the transient light is measured in cases such as a SN superimposed on top of its host galaxy.
+
+\section{Forced photometry}
+The two most common methods to measure flux from an image are PSF photometry and aperture photometry. PSF stands for point spread function, and with this method a function is fitted to model the source. This function describes how an infinitely small point of light is spread over the detector, and through its spatial size and peak value the flux of the light source can be measured. Aperture photometry sums up the signal in a given radius around the source center and subtracts the contribution from the background in the same region.
+
+\color{red} See \url{https://coolwiki.ipac.caltech.edu/index.php/Aperture_Photometry_Overview} for references \color{black}
+
+Large surveys such as ZTF observe the night sky to find new transients and monitor known ones. Difference imaging is used to reveal active transients, as these are the main sources that should be left in the difference image. Through PSF photometry the location and strength of each source in the image is determined, which are then compared to the locations of known sources to separate new from known ones. Each location has however been observed for the entire duration of the survey, which means that it is also possible to measure the flux of a known transient before and after it was visible in the images, creating a light curve for the full duration of the survey.
+
+This is called forced photometry, because the PSF function is forced to center on a specific location instead of finding the best-fitting position for the centroid. When there is nothing but noise at that location the measured flux will be 0 within the error. When there is a source at the target location it will be measured, but if the source is not at the center of the PSF the fit will have trouble converging, resulting in a large uncertainty.
+
+\section{The SuperNova Animation Program}
+The light curve that is the result of the forced photometry above can contain bad data points. Many of these will be flagged for having a bad PSF fit, bad weather conditions, etc. But even after filtering these out it can be helpful to check the difference images themselves for unexpected behavouir that might be captured in the light curve. For this I created the SuperNova Animation Program (\textsc{snap})
+
+\textsc{snap} collects image cutouts of the specified location during the  specified time period(s) and in the specified filter(s). It then matches these with the individual data points in the light curve and puts the images in an animation in chronological order with the reference images at the start. This enables easy identification of bad points due to image defects, off-center sources, residual from imperfectly subtracted sources, cosmic rays etc.
+
+\section{Simulations}
+Some experiments are difficult or even impossible to do multiple times, one cannot rerun a survey to observe the same transient events. So to understand the biases in the data as well as the effective size of the survey, it needs to be simulated.
+
+\end{document}
