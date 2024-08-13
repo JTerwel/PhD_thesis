@@ -5,27 +5,28 @@
 \contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}%
 \contentsline {section}{\numberline {1.1}The final stages of stars}{1}{section.1.1}%
 \contentsline {section}{\numberline {1.2}Type Ia SNe}{1}{section.1.2}%
-\contentsline {chapter}{\numberline {2}Observing in the optical regime}{2}{chapter.2}%
-\contentsline {section}{\numberline {2.1}Telescopes}{2}{section.2.1}%
-\contentsline {subsection}{\numberline {2.1.1}Zwicky Transient Facility}{2}{subsection.2.1.1}%
-\contentsline {subsection}{\numberline {2.1.2}Nordic Optical Telescope}{3}{subsection.2.1.2}%
+\contentsline {chapter}{\numberline {2}Observing in the optical regime}{3}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Telescopes}{3}{section.2.1}%
+\contentsline {subsection}{\numberline {2.1.1}Zwicky Transient Facility}{3}{subsection.2.1.1}%
+\contentsline {subsection}{\numberline {2.1.2}Nordic Optical Telescope}{4}{subsection.2.1.2}%
 \contentsline {subsection}{\numberline {2.1.3}Gran Telescopio CANARIAS}{5}{subsection.2.1.3}%
-\contentsline {subsection}{\numberline {2.1.4}Other observations}{5}{subsection.2.1.4}%
-\contentsline {section}{\numberline {2.2}General considerations for observing}{6}{section.2.2}%
-\contentsline {subsection}{\numberline {2.2.1}Location}{6}{subsection.2.2.1}%
-\contentsline {subsection}{\numberline {2.2.2}Telescope, instrument, mode, and setup}{7}{subsection.2.2.2}%
-\contentsline {subsection}{\numberline {2.2.3}Night plan}{8}{subsection.2.2.3}%
+\contentsline {subsection}{\numberline {2.1.4}Other observations}{6}{subsection.2.1.4}%
+\contentsline {section}{\numberline {2.2}General considerations for observing}{7}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}Location}{7}{subsection.2.2.1}%
+\contentsline {subsection}{\numberline {2.2.2}Telescope, instrument, mode, and setup}{8}{subsection.2.2.2}%
+\contentsline {subsection}{\numberline {2.2.3}Night plan}{9}{subsection.2.2.3}%
 \contentsline {section}{\numberline {2.3}Types of obeservations}{10}{section.2.3}%
-\contentsline {subsection}{\numberline {2.3.1}Photometry}{10}{subsection.2.3.1}%
+\contentsline {subsection}{\numberline {2.3.1}Photometry}{12}{subsection.2.3.1}%
 \contentsline {subsection}{\numberline {2.3.2}Spectroscopy}{12}{subsection.2.3.2}%
-\contentsline {subsection}{\numberline {2.3.3}Calibration: Bias}{13}{subsection.2.3.3}%
-\contentsline {subsection}{\numberline {2.3.4}Calibration: Dark}{13}{subsection.2.3.4}%
-\contentsline {subsection}{\numberline {2.3.5}Calibration: Flats}{13}{subsection.2.3.5}%
-\contentsline {subsection}{\numberline {2.3.6}Calibration: Arc}{14}{subsection.2.3.6}%
-\contentsline {chapter}{\numberline {3}Analysis techniques}{15}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Reduction}{15}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Difference imaging}{17}{section.3.2}%
-\contentsline {section}{\numberline {3.3}Forced photometry}{17}{section.3.3}%
-\contentsline {section}{\numberline {3.4}The SuperNova Animation Program}{18}{section.3.4}%
-\contentsline {section}{\numberline {3.5}Simulations}{18}{section.3.5}%
-\contentsline {chapter}{References}{19}{chapter*.10}%
+\contentsline {subsection}{\numberline {2.3.3}Calibration: Bias}{14}{subsection.2.3.3}%
+\contentsline {subsection}{\numberline {2.3.4}Calibration: Dark}{15}{subsection.2.3.4}%
+\contentsline {subsection}{\numberline {2.3.5}Calibration: Flats}{15}{subsection.2.3.5}%
+\contentsline {subsection}{\numberline {2.3.6}Calibration: Arc}{16}{subsection.2.3.6}%
+\contentsline {section}{\numberline {2.4}Reduction}{16}{section.2.4}%
+\contentsline {subsection}{\numberline {2.4.1}Bias, dark, and flat corrections}{17}{subsection.2.4.1}%
+\contentsline {subsection}{\numberline {2.4.2}Cosmic-ray removal and image stacking}{18}{subsection.2.4.2}%
+\contentsline {subsection}{\numberline {2.4.3}Flux calibration}{18}{subsection.2.4.3}%
+\contentsline {section}{\numberline {2.5}Difference imaging}{19}{section.2.5}%
+\contentsline {section}{\numberline {2.6}Forced photometry}{20}{section.2.6}%
+\contentsline {chapter}{\numberline {3}Analysis techniques}{21}{chapter.3}%
+\contentsline {chapter}{References}{22}{chapter*.12}%
