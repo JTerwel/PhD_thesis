@@ -11,50 +11,52 @@ A level-1 auxiliary file: chapter_2/observing.aux
 A level-1 auxiliary file: chapter_3/analysis.aux
 The style file: aa.bst
 Database file #1: thesis_references.bib
+Repeated entry---line 293 of file thesis_references.bib
+ : @article{Planck18VI
+ :                    ,
+I'm skipping whatever remains of this entry
 Warning--entry type for "astroSCRAPPY" isn't style-file defined
---line 400 of file thesis_references.bib
-Warning--entry type for "simsurvey" isn't style-file defined
---line 422 of file thesis_references.bib
+--line 418 of file thesis_references.bib
 Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
-You've used 22 entries,
+You've used 21 entries,
             3039 wiz_defined-function locations,
-            839 strings with 35078 characters,
-and the built_in function-call counts, 72172 in all, are:
-= -- 4822
-> -- 12568
+            836 strings with 38401 characters,
+and the built_in function-call counts, 79949 in all, are:
+= -- 5311
+> -- 14103
 < -- 5
-+ -- 4198
-- -- 4174
-* -- 7453
-:= -- 13757
-add.period$ -- 22
-call.type$ -- 22
-change.case$ -- 1479
++ -- 4709
+- -- 4687
+* -- 8285
+:= -- 15247
+add.period$ -- 21
+call.type$ -- 21
+change.case$ -- 1646
 chr.to.int$ -- 20
-cite$ -- 22
-duplicate$ -- 396
-empty$ -- 599
-format.name$ -- 4215
-if$ -- 13884
-int.to.chr$ -- 3
+cite$ -- 21
+duplicate$ -- 379
+empty$ -- 578
+format.name$ -- 4725
+if$ -- 15376
+int.to.chr$ -- 2
 int.to.str$ -- 1
 missing$ -- 19
-newline$ -- 70
-num.names$ -- 89
-pop$ -- 1466
+newline$ -- 67
+num.names$ -- 85
+pop$ -- 1632
 preamble$ -- 1
-purify$ -- 1479
+purify$ -- 1646
 quote$ -- 0
-skip$ -- 369
+skip$ -- 360
 stack$ -- 0
-substring$ -- 523
-swap$ -- 10
+substring$ -- 509
+swap$ -- 8
 text.length$ -- 1
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 198
+type$ -- 189
 warning$ -- 0
-while$ -- 87
+while$ -- 84
 width$ -- 0
-write$ -- 220
-(There were 2 warnings)
+write$ -- 211
+(There was 1 error message)
