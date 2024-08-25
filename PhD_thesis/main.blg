@@ -8,55 +8,58 @@ A level-1 auxiliary file: chapter_0/acknowledgements.aux
 A level-1 auxiliary file: chapter_0/publications.aux
 A level-1 auxiliary file: chapter_1/introduction.aux
 A level-1 auxiliary file: chapter_2/observing.aux
-A level-1 auxiliary file: chapter_3/analysis.aux
+A level-1 auxiliary file: chapter_3/DR2_search.aux
 The style file: aa.bst
 Database file #1: thesis_references.bib
-Repeated entry---line 293 of file thesis_references.bib
- : @article{Planck18VI
- :                    ,
-I'm skipping whatever remains of this entry
+Reallocated str_pool (elt_size=1) to 130000 items from 65000.
 Warning--entry type for "astroSCRAPPY" isn't style-file defined
---line 418 of file thesis_references.bib
+--line 1877 of file thesis_references.bib
+Warning--entry type for "simsurvey" isn't style-file defined
+--line 1899 of file thesis_references.bib
+Warning--entry type for "sncosmo" isn't style-file defined
+--line 2016 of file thesis_references.bib
+Warning--entry type for "ztffps" isn't style-file defined
+--line 2103 of file thesis_references.bib
 Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
-You've used 21 entries,
+You've used 92 entries,
             3039 wiz_defined-function locations,
-            836 strings with 38401 characters,
-and the built_in function-call counts, 79949 in all, are:
-= -- 5311
-> -- 14103
-< -- 5
-+ -- 4709
-- -- 4687
-* -- 8285
-:= -- 15247
-add.period$ -- 21
-call.type$ -- 21
-change.case$ -- 1646
-chr.to.int$ -- 20
-cite$ -- 21
-duplicate$ -- 379
-empty$ -- 578
-format.name$ -- 4725
-if$ -- 15376
-int.to.chr$ -- 2
+            1317 strings with 94559 characters,
+and the built_in function-call counts, 202778 in all, are:
+= -- 13855
+> -- 33728
+< -- 12
++ -- 11271
+- -- 11174
+* -- 20646
+:= -- 38604
+add.period$ -- 92
+call.type$ -- 92
+change.case$ -- 4091
+chr.to.int$ -- 89
+cite$ -- 92
+duplicate$ -- 1670
+empty$ -- 2427
+format.name$ -- 11365
+if$ -- 39059
+int.to.chr$ -- 4
 int.to.str$ -- 1
-missing$ -- 19
-newline$ -- 67
-num.names$ -- 85
-pop$ -- 1632
+missing$ -- 84
+newline$ -- 280
+num.names$ -- 370
+pop$ -- 4051
 preamble$ -- 1
-purify$ -- 1646
+purify$ -- 4091
 quote$ -- 0
-skip$ -- 360
+skip$ -- 1482
 stack$ -- 0
-substring$ -- 509
-swap$ -- 8
-text.length$ -- 1
+substring$ -- 2013
+swap$ -- 26
+text.length$ -- 2
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 189
+type$ -- 828
 warning$ -- 0
-while$ -- 84
+while$ -- 363
 width$ -- 0
-write$ -- 211
-(There was 1 error message)
+write$ -- 915
+(There were 4 warnings)
