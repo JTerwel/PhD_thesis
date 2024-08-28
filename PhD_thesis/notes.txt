@@ -48,13 +48,12 @@ NOTE: send by 23-8 at the latest for a proper check
 |   |             Keep to only to phot / spec
 |   |             (pol used as example above but not used so no explanation needed)
 | v |- Section 4: Reduction (Use calibs from above and explain step by step why)
-| w |- Section 5: Difference imaging (Check ZTF & autophot how they do it, ZOGY)
-| w |- Section 6: Forced photometry (FPbot uses psf, look closer into it)
-| X    Section  : SNAP, simulations: introduced better in paper 1, leave it there
+| X |- Section  : Difference imaging (Check ZTF & autophot how they do it, ZOGY) --> into FP section
+| w |- Section 5: Forced photometry (FPbot uses psf, look closer into it)
 | 
 |- Chapter 3: A systematic search for late-time rebrightening
-|   |           Short introduction? Add that section X has been extended
-| P |- Paper 1: Add with as little editing as possible
+|   |           Short introduction Add that section X has been extended
+| w |- Paper 1: Add with as little editing as possible
 |       |- Section X: SNAP section, add a snapshot of SNAP
 |
 |- Chapter 4: ZTF observed late-time signals of pre-ZTF transients
