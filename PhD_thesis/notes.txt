@@ -26,7 +26,8 @@ NOTE:
 'P' = Paper version exists, paper at or beyond submission stage
 'X' = Scrapped section, but has info here that's still needed
 
-NOTE: send by 23-8 at the latest for a proper check
+NOTE: send 1st draft by 20-9
+NOTE: List of publications: All papers except the master-related one that I am on, title + reference
 
 %%%%%%%%%%%%%%%%%%%%%%%%
 % THESIS PLAN & LAYOUT %

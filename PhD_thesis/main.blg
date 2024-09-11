@@ -9,57 +9,130 @@ A level-1 auxiliary file: chapter_0/publications.aux
 A level-1 auxiliary file: chapter_1/introduction.aux
 A level-1 auxiliary file: chapter_2/observing.aux
 A level-1 auxiliary file: chapter_3/DR2_search.aux
+A level-1 auxiliary file: chapter_4/pre-ZTF_search.aux
+Case mismatch error between cite keys PTF11kx and ptf11kx
+---line 200 of file chapter_4/pre-ZTF_search.aux
+ : \citation{PTF11kx
+ :                  ,Inserra_2016}
+I'm skipping whatever remains of this command
 The style file: aa.bst
+Reallocated field_info (elt_size=4) to 10425 items from 5000.
 Database file #1: thesis_references.bib
+Repeated entry---line 459 of file thesis_references.bib
+ : @article{Phillips_rel
+ :                      ,
+I'm skipping whatever remains of this entry
 Reallocated str_pool (elt_size=1) to 130000 items from 65000.
+Warning--entry type for "fpbot" isn't style-file defined
+--line 1832 of file thesis_references.bib
 Warning--entry type for "astroSCRAPPY" isn't style-file defined
---line 1877 of file thesis_references.bib
+--line 2151 of file thesis_references.bib
 Warning--entry type for "simsurvey" isn't style-file defined
---line 1899 of file thesis_references.bib
+--line 2173 of file thesis_references.bib
 Warning--entry type for "sncosmo" isn't style-file defined
---line 2016 of file thesis_references.bib
+--line 2290 of file thesis_references.bib
 Warning--entry type for "ztffps" isn't style-file defined
---line 2103 of file thesis_references.bib
+--line 2377 of file thesis_references.bib
+Repeated entry---line 3450 of file thesis_references.bib
+ : @article{2017gmr
+ :                 ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 3564 of file thesis_references.bib
+ : @article{2020ohl_Hinkle
+ :                        ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 3584 of file thesis_references.bib
+ : @article{IIp_ext
+ :                 ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 3602 of file thesis_references.bib
+ : @article{02ic_H_det
+ :                    ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 3614 of file thesis_references.bib
+ : @article{Hamuy_02ic
+ :                    ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 3632 of file thesis_references.bib
+ : @article{02ic_slow_decay
+ :                         ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 3650 of file thesis_references.bib
+ : @article{2005gj
+ :                ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 3668 of file thesis_references.bib
+ : @article{Kool_He_CSM
+ :                     ,
+I'm skipping whatever remains of this entry
+Reallocated str_pool (elt_size=1) to 195000 items from 130000.
+Repeated entry---line 4133 of file thesis_references.bib
+ : @article{CLAGN
+ :               ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 4214 of file thesis_references.bib
+ : @article{Hinkle_MIR_ANT_echo
+ :                             ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 4232 of file thesis_references.bib
+ : @article{Hinkle_Extreme_nuclear_transients/ANTs
+ :                                                ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 4249 of file thesis_references.bib
+ : @article{Kankare_ANT
+ :                     ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 4266 of file thesis_references.bib
+ : @article{wiseman_ztfants
+ :                         ,
+I'm skipping whatever remains of this entry
+Warning--I didn't find a database entry for "Autophot"
 Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
-You've used 92 entries,
+Warning--can't use both author and editor fields in SN_large_pic
+Warning--empty publisher in SN_large_pic
+Warning--empty publisher in 2024gy_z
+Warning--empty publisher in starstruct
+Warning--can't use both author and editor fields in Taubenberger_plot
+Warning--empty publisher in Taubenberger_plot
+You've used 216 entries,
             3039 wiz_defined-function locations,
-            1317 strings with 94559 characters,
-and the built_in function-call counts, 202778 in all, are:
-= -- 13855
-> -- 33728
-< -- 12
-+ -- 11271
-- -- 11174
-* -- 20646
-:= -- 38604
-add.period$ -- 92
-call.type$ -- 92
-change.case$ -- 4091
-chr.to.int$ -- 89
-cite$ -- 92
-duplicate$ -- 1670
-empty$ -- 2427
-format.name$ -- 11365
-if$ -- 39059
-int.to.chr$ -- 4
+            2096 strings with 138651 characters,
+and the built_in function-call counts, 316376 in all, are:
+= -- 22309
+> -- 48526
+< -- 49
++ -- 16226
+- -- 15997
+* -- 31428
+:= -- 59960
+add.period$ -- 216
+call.type$ -- 216
+change.case$ -- 6192
+chr.to.int$ -- 205
+cite$ -- 222
+duplicate$ -- 3936
+empty$ -- 5769
+format.name$ -- 16493
+if$ -- 61195
+int.to.chr$ -- 12
 int.to.str$ -- 1
-missing$ -- 84
-newline$ -- 280
-num.names$ -- 370
-pop$ -- 4051
+missing$ -- 206
+newline$ -- 652
+num.names$ -- 869
+pop$ -- 6149
 preamble$ -- 1
-purify$ -- 4091
+purify$ -- 6192
 quote$ -- 0
-skip$ -- 1482
+skip$ -- 3522
 stack$ -- 0
-substring$ -- 2013
-swap$ -- 26
-text.length$ -- 2
+substring$ -- 4829
+swap$ -- 60
+text.length$ -- 3
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 828
-warning$ -- 0
-while$ -- 363
+type$ -- 1932
+warning$ -- 6
+while$ -- 859
 width$ -- 0
-write$ -- 915
-(There were 4 warnings)
+write$ -- 2144
+(There were 15 error messages)
