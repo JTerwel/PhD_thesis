@@ -8,4 +8,7 @@
 \subpreamble{chapter_3/DR2_search.tex}
 \usepackage {setspace}
 \endsubpreamble
+\subpreamble{chapter_4/pre-ZTF_search.tex}
+\usepackage {setspace}
+\endsubpreamble
 \endstandalonepreambles
