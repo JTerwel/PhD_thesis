@@ -5,11 +5,13 @@
 \doublespacing
 \chapter{ZTF SN Ia DR2: Searching for late-time interaction signatures in Type Ia supernovae from the Zwicky Transient Facility}
 \label{chap:DR2_search}
+This chapter details my search for late-time interaction signals in the ZTF second data release \citep[ZTF SN Ia DR2,][Smith et al. in prep.]{DR2_Overview} and has been published in \citet{Terwel_2024_paper1}. This chapter contains the same details as \citet{Terwel_2024_paper1} but expands on Section \ref{snap} with an extra figure.
 
+As stated in Section \ref{ZTF} the magnitude limit for single ZTF exposures is $\sim20.5$ mag. By binning post-SN observations together for each object in the ZTF SN Ia DR2 sample, I attempt to push beyond this limit to find any faint signals that have gone previously unnoticed due to being close to the detection limit. This requires building and testing an automated pipeline, the explanation of which is given in Section \ref{DR2_analysis}. In Chapters \ref{chap:Pre-ZTF_search} and \ref{chap:Real-time} I will slightly modify this pipeline to use it on different samples with the same goal of finding faint late-time excesses.
 
-\color{red} This is Paper I, but needs to be properly adapted. Refer back to previous chapters. Copied in paper and appended the appendix straight afterwards. To-do list: Check for broken references, check for double refs, reformat pages, expand \textsc{snap} section, make sure all the \ztfg\ztfr\ztfi\ things are consistent, check the in prep. refs\color{black}
+In Section \ref{DR2_data}, I introduce the sample I use in my search for optical signals for late-time CSM interaction in the ZTF data stream. In Section \ref{DR2_analysis}, I present my custom pipeline for identification of late-time flux excesses and set up a simulation to test it and estimate the detection efficiency of my pipeline. Section \ref{DR2_results} shows the result of running my sample through my pipeline, and provides further investigation on some interesting objects. These results are discussed in Section \ref{DR2_discussion}, and I conclude in Section \ref{DR2_conclusion}.
 
-This chapter details my search for late-time interaction signals in the ZTF second data release (ZTF SN Ia DR2, Rigault et al. in prep.; Smith et al. in prep.) and has been published in \cite{Terwel_2024_paper1}. As stated in Section \ref{ZTF} the magnitude limit for single ZTF exposures is $\sim20.5$ mag. By binning post-SN observations together for each confirmed SN Ia observed with ZTF, I attempt to push beyond this limit to find any faint signals that have gone previously unnoticed due to being close to the detection limit. In Section \ref{DR2_data}, I introduce the sample I use in my search for optical signals for late-time CSM interaction in the ZTF data stream. In Section \ref{DR2_analysis}, I present my custom pipeline for identification of late-time flux excesses and set up a simulation to test it and estimate the detection efficiency of my pipeline. Section \ref{DR2_results} shows the result of running my sample through my pipeline, and provides further investigation on some interesting objects. These results are discussed in Section \ref{DR2_discussion}, and I conclude in Section \ref{DR2_conclusion}. Chapter \ref{chap:DR2_search} contains the same details as the paper but expands on Section \ref{snap} with an extra figure.
+\color{red} This is Paper I, but needs to be properly adapted. Copied in paper and put the appendices in the proper text part. To-do list: Check for broken references, check for double refs, reformat pages, make sure all the \ztfg\ztfr\ztfi\ things are consistent, check the in prep. refs\color{black}
 
 
 \section{Data}
@@ -115,6 +117,94 @@ To make sure the binning programme works as expected and estimate its detection 
 \label{model_description}
 I chose SN 2011fe as the template of a normal SN Ia as it is well observed and close by (in M101 at a distance of 6.4 Mpc, \citealt{M101_cep_dist}). Optical spectra of SN 2011fe were obtained between phases of $-$18 to 1017\,d relative to the peak. I made a custom model using \textsc{sncosmo} and spectra found on WISeREP \citep{wiserep}\footnote{\url{https://wiserep.weizmann.ac.il}}, which are listed in Table \ref{11fe_sources}. The spectra were flux calibrated to match the observed coeval broadband magnitudes. Spectra up to 45\,d after the peak were flux calibrated using a \textsc{salt2} \citep{salt2} fit of the \textit{PTF48g} and \textit{PTF48R}-band photometry \citep{PTF_1, PTF_2}, which is used to estimate the flux in the \ztfg- and \ztfr- bands at these phases. Spectra between 45 and 400\,d are flux calibrated using a cubic spline interpolation of photometry in the \textit{PTF48g}- and \textit{PTF48R}-bands. The interpolation extends up to 600\,d after the peak in the \textit{PTF48R}-band, there is no \textit{PTF48g} photometry used between 400 and 600\,d after the peak. Three interpolated photometry points from the \textsc{salt2} fits were used as anchor points to connect these two parts of the calibration. \citet{Georgios_11fe} show that there is a slight kink in the light curve tail around 600\,d after the peak. This is replicated in the model by calibrating all spectra more than 600\,d after the peak using a cubic spline interpolation of photometry from the Large Binocular Telescope \citep[LBT;][]{LBT} in the Bessel \textit{R}-band \citep{Shappee_11fe}.
 
+\tiny
+\begin{longtable}{cccccc}
+ \caption{Spectra used to make the SN 2011fe model. All spectra were taken from WISeREP \citep{wiserep}.}
+ \label{11fe_sources}
+ \endfirsthead
+ \hline
+ \hline
+ MJD  & Phase (d) & Telescope & Instrument & Wavelength coverage (\AA) & Reference    \\
+ \hline
+ \endhead
+ \hline
+ \endfoot
+ \hline
+ \endlastfoot
+ \hline
+ \hline
+ MJD  & Phase (d) & Telescope & Instrument & Wavelength coverage (\AA) & Reference    \\
+ \hline
+ 55798.0 & $-$16.0 & Lijiang-2.4m & YFOSC & 3461 -- 8956 & \citet{spec_Lijiang-2.4m} \\
+ 55798.2 & $-$15.8 & Lick-3m  & KAST & 3416 -- 10278 & \citet{Nugent_1st_Lick_spec} \\
+ 55799.0 & $-$15.0 & Lijiang-2.4m & YFOSC & 3502 -- 8958 & \citet{spec_Lijiang-2.4m} \\
+ 55799.3 & $-$14.7 & UH88   & SNIFS & 3296 -- 9693 & \citet{spec_UH88} \\
+ 55800.2 & $-$13.8 & UH88   & SNIFS & 3296 -- 9693 & \citet{spec_UH88} \\
+ 55801.2 & $-$12.8 & UH88   & SNIFS & 3296 -- 9693 & \citet{spec_UH88} \\
+ 55802.3 & $-$11.7 & UH88   & SNIFS & 3296 -- 9693 & \citet{spec_UH88} \\
+ 55803.2 & $-$10.8 & UH88   & SNIFS & 3296 -- 9693 & \citet{spec_UH88} \\
+ 55804.2 & $-$9.8 & UH88   & SNIFS & 3296 -- 9693 & \citet{spec_UH88} \\
+ 55805.2 & $-$8.8 & UH88   & SNIFS & 3296 -- 9693 & \citet{spec_UH88} \\
+ 55806.2 & $-$7.8 & UH88   & SNIFS & 3296 -- 9693 & \citet{spec_UH88} \\
+ 55807.3 & $-$6.7 & UH88   & SNIFS & 3296 -- 9693 & \citet{spec_UH88} \\
+ 55808.2 & $-$5.8 & UH88   & SNIFS & 3296 -- 9693 & \citet{spec_UH88} \\
+ 55809.2 & $-$4.8 & UH88   & SNIFS & 3296 -- 9693 & \citet{spec_UH88} \\
+ 55811.4 & $-$2.6 & HST   & STIS & 1779 -- 24965 & \citet{spec_HST} \\
+ 55812.0 & $-$2.0 & Gemini-N  & GMOS & 3497 -- 9648 & \citet{spec_Gemini-N} \\
+ 55813.2 & $-$0.8 & UH88   & SNIFS & 3296 -- 9693 & \citet{spec_UH88} \\
+ 55814.2 & 0.2 & UH88   & SNIFS & 3296 -- 9693 & \citet{spec_UH88} \\
+ 55815.2 & 1.2 & UH88   & SNIFS & 3296 -- 9693 & \citet{spec_UH88} \\
+ 55816.2 & 2.2 & UH88   & SNIFS & 3296 -- 9693 & \citet{spec_UH88} \\
+ 55817.2 & 3.2 & UH88   & SNIFS & 3296 -- 9693 & \citet{spec_UH88} \\
+ 55817.7 & 3.7 & HST   & STIS & 1265 -- 24965 & \citet{spec_HST} \\
+ 55818.2 & 4.2 & UH88   & SNIFS & 3296 -- 9693 & \citet{spec_UH88} \\
+ 55821.2 & 7.2 & UH88   & SNIFS & 3296 -- 9693 & \citet{spec_UH88} \\
+ 55823.2 & 9.2 & UH88   & SNIFS & 3296 -- 9693 & \citet{spec_UH88} \\
+ 55826.2 & 12.2 & UH88   & SNIFS & 3296 -- 9693 & \citet{spec_UH88} \\
+ 55828.2 & 14.2 & UH88   & SNIFS & 3296 -- 9693 & \citet{spec_UH88} \\
+ 55829.0 & 15.0 & Gemini-N  & GMOS & 3497 -- 9643 & \citet{spec_Gemini-N} \\
+ 55830.2 & 16.2 & Keck1  & LRIS & 3227 -- 10242 & \citet{spec_Lick-3m} \\
+ 55831.2 & 17.2 & UH88   & SNIFS & 3296 -- 9693 & \citet{spec_UH88} \\
+ 55832.0 & 18.0 & Lijiang-2.4m & YFOSC & 3577 -- 8957 & \citet{spec_Lijiang-2.4m} \\
+ 55833.2 & 19.2 & UH88   & SNIFS & 3296 -- 9693 & \citet{spec_UH88} \\
+ 55835.3 & 21.3 & HST   & STIS & 1731 -- 10221 & \citet{spec_HST} \\
+ 55836.2 & 22.2 & UH88   & SNIFS & 3296 -- 9693 & \citet{spec_UH88} \\
+ 55838.2 & 24.2 & UH88   & SNIFS & 3296 -- 9693 & \citet{spec_UH88} \\
+ 55841.3 & 27.3 & HST   & STIS & 1738 -- 10221 & \citet{spec_HST} \\
+ 55855.2 & 41.2 & HST   & STIS & 1738 -- 10216 & \citet{spec_HST} \\
+ 55888.6 & 74.7 & UH88   & SNIFS & 3296 -- 9693 & \citet{spec_UH88} \\
+ 55891.7 & 77.7 & UH88   & SNIFS & 3296 -- 9693 & \citet{spec_UH88} \\
+ 55893.6 & 79.7 & UH88   & SNIFS & 3296 -- 9693 & \citet{spec_UH88} \\
+ 55896.6 & 82.6 & UH88   & SNIFS & 3296 -- 9693 & \citet{spec_UH88} \\
+ 55897.7 & 83.7 & Keck1  & LRIS & 3164 -- 10126 & \citet{spec_Lick-3m} \\
+ 55901.6 & 87.6 & UH88   & SNIFS & 3296 -- 9693 & \citet{spec_UH88} \\
+ 55903.6 & 89.6 & UH88   & SNIFS & 3296 -- 9693 & \citet{spec_UH88} \\
+ 55911.0 & 97.0 & XLT   & BFOSC & 3296 -- 9693 & \citet{spec_Lijiang-2.4m} \\
+ 55911.6 & 97.6 & UH88   & SNIFS & 3296 -- 9693 & \citet{spec_UH88} \\
+ 55913.5 & 99.5 & Lick-3m  & KAST & 3427 -- 10332 & \citet{spec_Lick-3m} \\
+ 55914.0 & 100.0 & WHT-4.2m  & ISIS & 3499 -- 9491 & \citet{WHT_spec_100d} \\
+ 55916.0 & 102.0 & WHT-4.2m  & ISIS & 3498 -- 9491 & \citet{PTF_1, PTF_2} \\
+ 55917.0 & 103.0 & WHT-4.2m  & ISIS & 3499 -- 9492 & \citet{PTF_1, PTF_2} \\
+ 55926.0 & 112.0 & Lijiang-2.4m & YFOSC & 3366 -- 9069 & \citet{spec_Lijiang-2.4m} \\
+ 55929.5 & 115.5 & Lick-3m  & KAST & 3426 -- 10170 & \citet{spec_Lick-3m} \\
+ 55944.5 & 130.5 & Lick-3m  & KAST & 3453 -- 10088 & \citet{spec_Lick-3m} \\
+ 55959.0 & 145.0 & Lick-3m  & KAST & 3497 -- 10000 & \citet{PTF_1, PTF_2} \\
+ 55980.4 & 166.4 & Lick-3m  & KAST & 3441 -- 10250 & \citet{spec_Lick-3m} \\
+ 55988.0 & 174.0 & WHT-4.2m  & ISIS & 3495 -- 9982 & \citet{spec_WHT-4.2m} \\
+ 56019.4 & 205.4 & Lick-3m  & KAST & 3438 -- 10324 & \citet{spec_WHT-4.2m} \\
+ 56040.4 & 226.4 & Lick-3m  & KAST & 3437 -- 10178 & \citet{spec_WHT-4.2m} \\
+ 56047.0 & 233.0 & Lijiang-2.4m & YFOSC & 3392 -- 9053 & \citet{spec_Lijiang-2.4m} \\
+ 56073.0 & 259.0 & WHT-4.2m  & ISIS & 3495 -- 9483 & \citet{spec_WHT-4.2m} \\
+ 56103.0 & 289.0 & WHT-4.2m  & ISIS & 3423 -- 10268 & \citet{spec_WHT-4.2m} \\
+ 56127.0 & 313.0 & P200   & DBSP & 3197 -- 10991 & \citet{PTF_1, PTF_2} \\
+ 56162.2 & 348.2 & Lick-3m  & KAST & 3487 -- 10240 & \citet{spec_WHT-4.2m} \\
+ 56194.2 & 380.2 & Keck1  & LRIS & 3232 -- 10268 & \citet{spec_Lick-3m} \\
+ 56277.0 & 463.0 & Lijiang-2.4m & YFOSC & 3379 -- 9337 & \citet{spec_Lijiang-2.4m} \\
+ 56778.5 & 964.5 & Keck1  & LRIS & 3074 -- 10320 & \citet{spec_Lick-3m+Keck1} \\
+ 56831.2 & 1017.2& LBT   & MODS1 & 3098 -- 10487 & \citet{spec_LBT} \\
+\end{longtable}
+\normalsize
+
 After flux calibration, the spectra were dereddened to remove dust extinction effects, using the \citet{ccm89_extinction_law} extinction law with $A_V = 0.04$ mag \citep{extinction_Av}. The spectra were rebinned, and any wavelength region that was not covered in all spectra was removed as required by \textsc{simsurvey}. Lastly, the model is corrected for distance, redshift and time dilation. The resulting model is that of a normal SN Ia, which exploded at a distance of 10 pc without any dust between the source and observer.
 
  The best late-time detection of CSM in a normal/91T-like SN Ia was for SN 2015cp, where \Halpha\ emission was identified in its spectra at 664 d after the light-curve peak \citep{2015cp}. To model potential CSM interaction signals similar to that of SN 2015cp, I add a narrow \Halpha~line with a Gaussian profile to the SN 2011fe model. Due to the rareness of interaction in otherwise normal SNe Ia, I do not have good constraints on the diversity of interaction signatures and simulate a broad parameter space. The interaction was chosen to start at 100, 200, 300, or 500 days after the peak, last for 100, 300, or 500 days, and have a similar brightness to the observed signal in SN 2015cp \citep{2015cp}, as well as 10 times weaker or 10 times stronger than it. All possible combinations of these values are used, and a simulation without any interaction is also used as a control test, giving a total of 37 simulations. 
@@ -138,7 +228,20 @@ Figure~\ref{mod_15cp_comp} shows an example of my model spectra at 300\,d and SN
 
 \subsubsection{Simulating the observing campaign}
 \label{sim_obs}
-By specifying the object to observe, as well as the telescope details and observation schedule, an observation campaign can be performed using \textsc{simsurvey} resulting in a collection of observed light curves. For a deeper explanation of \textsc{simsurvey} I refer the reader to \cite{simsurvey_main}. The parameters used as input are listed in Appendix \ref{sec:simsurvey_inputs}. In each \textsc{simsurvey} run, $10^5$ SNe Ia are simulated to produce observed light curves and meta-data such as redshift, observed peak date, etc. To ensure that the SNe Ia are similar around the peak to those recovered, I require that the SN Ia light curves must have at least three detections of $\geq$5$\sigma$ and are brighter that 19 magnitude at the peak. This reduces the sample to $\sim$ 40,000 objects per simulation. These are sent through the binning and filtering programme (Section \ref{pipeline}) as if they were real observed light curves to determine the recovery efficiency. 
+By specifying the object to observe, as well as the telescope details and observation schedule, an observation campaign can be performed using \textsc{simsurvey} resulting in a collection of observed light curves. For a deeper explanation of \textsc{simsurvey} I refer the reader to \cite{simsurvey_main}. The parameters used as input are:
+
+\begin{itemize}
+ \item Model: SN 2011fe + \Halpha~line (Section \ref{model_description}).
+ \item Sky distribution: RA $\in$ [0$^{\circ}$, 360$^{\circ}$], Dec. $\geq -30^{\circ}$ (The area covered by ZTF, \citealt{ZTF_Surveys_Scheduler}).
+ \item Volumetric rate: The SN Ia rate is $2.4\times10^{-5}$ Mpc$^{-3}$ yr$^{-1}$ for $z \leq 0.1$ \citep{SNIa_rate}. \textsc{simsurvey} uses this to calculate the amount of SNe to generate at a given redshift interval.
+ \item SN peak time distribution: $58\,195 \leq$ modified Julian date (MJD) $\leq 58\,487$ (between 18 March 2018 and 4 January 2019).
+ \item Galactic extinction: dust maps from \citet{SFD98_dust_maps}.
+ \item Host galaxy extinction: \citet{ccm89_extinction_law} extinction law, with \textit{E(B -- V)} drawn from an exponential distribution with exponent $\lambda=0.11$ \citep{EBV_simsurvey}, the same way as host extinction was added in the original \textsc{simsurvey} paper \citep{simsurvey_main}.
+ \item Telescope specifications: ZTF P48 camera, 4$\times$4 grid of CCDs with four readout channels each, resulting in 64 separate output channels \citep{ZTF_Observing_System}.
+ \item Survey plan: ZTF observation logs between $58\,197\leq$ MJD $\leq 59\,211$ (between 20 March 2018 and 28 December 2020), ensuring all simulated SNe are followed for a minimum of about 2 years after the peak.
+\end{itemize}
+
+In each \textsc{simsurvey} run, $10^5$ SNe Ia are simulated to produce observed light curves and meta-data such as redshift, observed peak date, etc. To ensure that the SNe Ia are similar around the peak to those recovered, I require that the SN Ia light curves must have at least three detections of $\geq$5$\sigma$ and are brighter that 19 magnitude at the peak. This reduces the sample to $\sim$ 40,000 objects per simulation. These are sent through the binning and filtering programme (Section \ref{pipeline}) as if they were real observed light curves to determine the recovery efficiency. 
 
 The volumetric rate used as input in the simulations favours more distant SNe, which results in very few SNe at extremely low redshift values and hence larger uncertainties. To mitigate this, I split $0\leq z\leq 0.015$ into bins of size 0.001 and simulate an additional 100 SNe in each bin using the same parameters as in the original simulations. Introducing these additional events does not impact the recovery efficiencies because I am comparing the number of recovered events relative to the input number in each redshift bin and therefore, am insensitive to the input rate of events. 
 
@@ -153,13 +256,65 @@ In the simulation without CSM interaction, the recovery fraction is non-zero at 
 
 I fitted a sigmoid function to the recovery fractions of each simulation, using the total amount of objects in each bin as its weight (Fig.~\ref{recov_fracs}). A sigmoid function is an oversimplification (the recovery fraction is underestimated at the low redshifts) but it allows me to easily estimate the redshift limit where CSM interaction can be recovered. I define my redshift limit where CSM interaction can be recovered as $z_{50}$, the redshift where 50 per cent of the SN interactions are recovered. These values are listed for all simulations in Table \ref{sim_z50_results}.
 
-
 \begin{figure}
  \centering
  \includegraphics[width=\textwidth]{../Images/chapter_3/recov_fracs.png}
  \caption{Fraction of SNe Ia for one of my simulations (interaction occurring between 500 -- 1000\,d after the peak) where the CSM interaction was recovered per redshift bin of size $0.002$. The simulations are shown for interaction strengths of zero (grey), similar to SN 2015cp (red), and 10 times stronger than SN 2015cp (blue). In the simulation without CSM interaction, the recovery fraction should be interpreted as the fraction of false positives. The simulations with normal ZTF quality reference images are shown with dots and fitted sigmoid functions with solid lines. Simulations where one magnitude deeper reference images were assumed are shown in triangles, with their fitted sigmoid functions in dashed lines.}
  \label{recov_fracs}
 \end{figure}
+
+\begin{table}
+ \centering
+ \caption{Redshift values where 50 per cent of the simulated SNe were found to have CSM interaction. Strength is the strength of the \Halpha~line compared to the strength detected in SN 2015cp. Start shows how many days after the peak the interaction begins, and duration is in days as well. I fitted sigmoid functions to the results of each simulation in order to find the redshift where 50 per cent of the interactions were recovered, assuming the reference images were of the same depth as the ones used in ZTF or 0.5 or 1 mag deeper. These values are shown in $z_{50} \pm \sigma_{z_{50}}$, and $\chi^2_\text{red}$ shows the quality of the fit.}
+ \resizebox{\textwidth}{!}{%Scale table to page width
+ \begin{tabular}{cccclcrclcrclcr}
+  \hline
+  \hline
+  &&&& \multicolumn{3}{c}{ZTF references} && \multicolumn{3}{c}{0.5 mag deeper} && \multicolumn{3}{c}{1 mag deeper}\\
+  strength & start & duration && $z_{50}$ & $\sigma_{z_{50}}$ & $\chi^2_\text{red}$ && $z_{50}$ & $\sigma_{z_{50}}$ & $\chi^2_\text{red}$ && $z_{50}$ & $\sigma_{z_{50}}$ & $\chi^2_\text{red}$\\
+  \hline
+  0.0 & -- & -- && 0.0038 & 0.0009 & 0.72 && 0.0042 & 0.0019 & 1.83 && 0.0046 & 0.0032 & 3.47\\
+  0.1 & 100 & 100 && 0.0041 & 0.0008 & 0.83 && 0.0049 & 0.0011 & 1.82 && 0.0049 & 0.0033 & 3.41\\
+  0.1 & 100 & 300 && 0.0050 & 0.0007 & 0.79 && 0.0055 & 0.0014 & 1.79 && 0.0059 & 0.0025 & 3.42\\
+  0.1 & 100 & 500 && 0.0053 & 0.0006 & 0.77 && 0.0062 & 0.0011 & 1.76 && 0.0068 & 0.0018 & 3.44\\
+  0.1 & 200 & 100 && 0.0045 & 0.0007 & 0.78 && 0.0050 & 0.0016 & 1.80 && 0.0054 & 0.0028 & 3.38\\
+  0.1 & 200 & 300 && 0.0053 & 0.0006 & 0.78 && 0.0058 & 0.0014 & 1.79 && 0.0063 & 0.0022 & 3.44\\
+  0.1 & 200 & 500 && 0.0056 & 0.0006 & 0.77 && 0.0066 & 0.0010 & 1.79 && 0.0073 & 0.0016 & 3.47\\
+  0.1 & 300 & 100 && 0.0050 & 0.0006 & 0.80 && 0.0056 & 0.0012 & 1.80 && 0.0059 & 0.0023 & 3.43\\
+  0.1 & 300 & 300 && 0.0052 & 0.0006 & 0.80 && 0.0061 & 0.0044 & 1.78 && 0.0067 & 0.0017 & 3.46\\
+  0.1 & 300 & 500 && 0.0053 & 0.0005 & 0.82 && 0.0060 & 0.0010 & 2.03 && 0.0069 & 0.0016 & 3.53\\
+  0.1 & 500 & 100 && 0.0045 & 0.0007 & 0.82 && 0.0048 & 0.0014 & 2.08 && 0.0054 & 0.0021 & 3.52\\
+  0.1 & 500 & 300 && 0.0050 & 0.0005 & 0.83 && 0.0056 & 0.0010 & 2.09 && 0.0062 & 0.0017 & 3.53\\
+  0.1 & 500 & 500 && 0.0050 & 0.0005 & 0.82 && 0.0057 & 0.0009 & 2.09 && 0.0063 & 0.0017 & 3.52\\
+  1.0 & 100 & 100 && 0.0041 & 0.0007 & 0.86 && 0.0045 & 0.0013 & 2.10 && 0.0046 & 0.0027 & 3.58\\
+  1.0 & 100 & 300 && 0.0091 & 0.0005 & 0.85 && 0.0096 & 0.0012 & 1.98 && 0.0108 & 0.0017 & 3.40\\
+  1.0 & 100 & 500 && 0.0111 & 0.0004 & 0.84 && 0.0129 & 0.0008 & 2.08 && 0.0139 & 0.0013 & 3.50\\
+  1.0 & 200 & 100 && 0.0067 & 0.0007 & 0.80 && 0.0077 & 0.0012 & 2.05 && 0.0083 & 0.0021 & 3.51\\
+  1.0 & 200 & 300 && 0.0104 & 0.0005 & 0.93 && 0.0122 & 0.0008 & 2.06 && 0.0130 & 0.0014 & 3.31\\
+  1.0 & 200 & 500 && 0.0116 & 0.0004 & 0.84 && 0.0129 & 0.0008 & 2.11 && 0.0140 & 0.0018 & 3.63\\
+  1.0 & 300 & 100 && 0.0086 & 0.0004 & 0.78 && 0.0094 & 0.0008 & 1.95 && 0.0100 & 0.0013 & 3.62\\
+  1.0 & 300 & 300 && 0.0105 & 0.0004 & 0.75 && 0.0118 & 0.0007 & 2.02 && 0.0128 & 0.0015 & 3.61\\
+  1.0 & 300 & 500 && 0.0109 & 0.0004 & 0.78 && 0.0125 & 0.0008 & 2.11 && 0.0139 & 0.0013 & 3.76\\
+  1.0 & 500 & 100 && 0.0081 & 0.0003 & 0.83 && 0.0090 & 0.0008 & 1.94 && 0.0094 & 0.0016 & 3.69\\
+  1.0 & 500 & 300 && 0.0104 & 0.0003 & 0.78 && 0.0121 & 0.0007 & 2.10 && 0.0133 & 0.0012 & 3.79\\
+  1.0 & 500 & 500 && 0.0105 & 0.0003 & 0.80 && 0.0122 & 0.0007 & 2.11 && 0.0135 & 0.0012 & 3.80\\
+  10.0 & 100 & 100 && 0.0091 & 0.0014 & 0.93 && 0.0097 & 0.0028 & 2.13 && 0.0087 & 0.0058 & 3.45\\
+  10.0 & 100 & 300 && 0.0259 & 0.0007 & 1.36 && 0.0299 & 0.0009 & 1.79 && 0.0328 & 0.0012 & 1.83\\
+  10.0 & 100 & 500 && 0.0297 & 0.0005 & 1.21 && 0.0347 & 0.0007 & 1.83 && 0.0383 & 0.0010 & 1.84\\
+  10.0 & 200 & 100 && 0.0204 & 0.0009 & 1.69 && 0.0223 & 0.0012 & 2.40 && 0.0217 & 0.0019 & 2.54\\
+  10.0 & 200 & 300 && 0.0314 & 0.0004 & 1.45 && 0.0351 & 0.0007 & 1.98 && 0.0377 & 0.0010 & 2.40\\
+  10.0 & 200 & 500 && 0.0326 & 0.0005 & 1.50 && 0.0374 & 0.0007 & 2.05 && 0.0415 & 0.0009 & 1.95\\
+  10.0 & 300 & 100 && 0.0221 & 0.0023 & 1.21 && 0.0233 & 0.0011 & 2.01 && 0.0231 & 0.0019 & 2.71\\
+  10.0 & 300 & 300 && 0.0311 & 0.0004 & 1.30 && 0.0350 & 0.0007 & 1.90 && 0.0375 & 0.0010 & 2.27\\
+  10.0 & 300 & 500 && 0.0328 & 0.0004 & 1.42 && 0.0381 & 0.0007 & 2.22 && 0.0423 & 0.0009 & 2.21\\
+  10.0 & 500 & 100 && 0.0199 & 0.0011 & 1.80 && 0.0224 & 0.0014 & 2.47 && 0.0226 & 0.0019 & 3.04\\
+  10.0 & 500 & 300 && 0.0323 & 0.0004 & 1.23 && 0.0371 & 0.0007 & 2.12 && 0.0406 & 0.0009 & 2.19\\
+  10.0 & 500 & 500 && 0.0323 & 0.0004 & 1.22 && 0.0373 & 0.0007 & 2.12 && 0.0407 & 0.0009 & 2.12\\
+  \hline
+ \end{tabular}
+ }
+ \label{sim_z50_results}
+\end{table}
 
  As discussed in Section \ref{model_description}, I simulated 36 models with interaction signatures starting at 100, 200, 300 and 500 d post peak, lasting for 100, 300 and 500 d, and with strengths the same as SN 2015cp, 10 times weaker and 10 times stronger. I also simulated a model without any late-time CSM interaction. For the models with an interaction strength similar to SN 2015cp \citep{2015cp}, when the interaction is short and early (starting 100 days after the peak and lasting for 100 days), the interaction cannot be distinguished from a normal SN Ia decaying light curve and the recovery fraction is as low as the no interaction simulation. When the interaction is longer, or if it starts later, the light curve flattens enough to be identified as deviating from a normally declining SN Ia tail. This pushes the redshift boundary where 50 per cent of the interaction would be recovered by ZTF to $z_{50} = 0.0105 \pm 0.0003$ for the longest and latest interaction (500 - 1000 days after peak).
 
@@ -380,7 +535,7 @@ In the case of SN 2020kzd, late-time detections are present in the \ztfg- and \z
 
 \subsubsection{AGN contamination}
 \label{sec:agn_cont}
-If a SN explosion site is coincident with a host galaxy that has an AGN, host activity is a likely cause of the late-time detections. Using data from the Wide-field Infrared Survey Explorer (WISE; \citealt{WISE}), \citet{WISE_crit} present a criterion to test if a galaxy hosts an AGN based on the WISE \textit{W1--W2} and \textit{W2--W3} colours, which I apply to my events. One object (SN 2019vzf) is 4.86 kpc of its host centre and its host is a known AGN, with WISE colours of \textit{W1--W2} = $0.55\pm0.03$ and \textit{W2--W3} = $2.90\pm0.04$ mag. In \textsc{snap}, the late-time signal appears to cover both the SN and AGN locations. The AGN contamination is too strong to put any meaningful constraints on the late-time flux at the SN location. I kept the object in my sample until now to test if it is possible to use scene modelling to reduce the AGN contamination. However, this is not possible. I attribute the late-time signal to host activity and disregard it in future discussion. The light curves of SN 2019vzf are shown in Fig. \ref{other_alt}.
+If a SN explosion site is coincident with a host galaxy that has an AGN, host activity is a likely cause of the late-time detections. Using data from the \textit{Wide-field Infrared Survey Explorer} (WISE; \citealt{WISE}), \citet{WISE_crit} present a criterion to test if a galaxy hosts an AGN based on the WISE \textit{W1--W2} and \textit{W2--W3} colours, which I apply to my events. One object (SN 2019vzf) is 4.86 kpc of its host centre and its host is a known AGN, with WISE colours of \textit{W1--W2} = $0.55\pm0.03$ and \textit{W2--W3} = $2.90\pm0.04$ mag. In \textsc{snap}, the late-time signal appears to cover both the SN and AGN locations. The AGN contamination is too strong to put any meaningful constraints on the late-time flux at the SN location. I kept the object in my sample until now to test if it is possible to use scene modelling to reduce the AGN contamination. However, this is not possible. I attribute the late-time signal to host activity and disregard it in future discussion. The light curves of SN 2019vzf are shown in Fig. \ref{other_alt}.
 
 \begin{table}
  \centering
@@ -434,11 +589,18 @@ Assuming a sibling exploded during the gap in the observations between 870 and 9
 \textit{\textbf{SN 2020alm.}}
 The late-time signal in SN 2020alm is seen in all three bands, beginning at $\sim$750\,d after the peak and lasting for at least 300 d. There is a gap of 80\,d in the observations immediately before the period of activity. The detections slowly rise to a plateau. My initial analysis only included data for SN 2020alm up to $\sim$1000\,d after the peak. However, when this object was identified as having late-time detections, the light curve pipeline was rerun and it was found to be still bright at later times, with significant detections in the \ztfr- and \ztfi-bands, but not above 5$\sigma$ detections in the \ztfg-band. The \ztfi-band SMP light curve contained a significant flux offset, as the host was not fully subtracted. I therefore do not further consider this band. The binned SMP \ztfr-band light curve fails to reproduce the late-time detections found in the forced photometry light curve. However, the \ztfg-band detections are recovered in the SMP. The SN is close to the host nucleus at 0.66$\arcsec$~(0.85 kpc) offset at the redshift of the SN, but the WISE colours of \textit{W1--W2} = $0.06\pm0.04$ and \textit{W2--W3} = $2.42\pm0.12$ place it far outside the AGN region. 
 
-As SN 2020alm was still active while my analysis was on-going, Two spectra were obtained using the Optical System for Imaging and low-Intermediate-Resolution Integrated Spectroscopy (OSIRIS+) instrument on the Gran Telescopio CANARIAS (GTC) at Roque de los Muchachos in La Palma on 26 July 2023 using the R1000R grism. As the spectrum is heavily dominated by the host galaxy, I subtracted a rebinned spectrum of the host taken by the Sloan Digital Sky Survey (SDSS, \citealt{SDSS-I-II, SDSS_DR4, SDSS_telescope, SDSS_Spectograph}) in 2003, well before the SN occurred. I confirmed successful host subtraction by checking for residual \NaID~and \MgI~${\lambda5175}$ absorption lines and found that no residual features were present. A more detailed explanation is given in Appendix \ref{spec_sec}. \color{red} appendix to section? \color{black}
+As SN 2020alm was still active while my analysis was on-going, Two spectra were obtained using the Optical System for Imaging and low-Intermediate-Resolution Integrated Spectroscopy (OSIRIS+) instrument on the Gran Telescopio CANARIAS (GTC) at Roque de los Muchachos in La Palma on 26 July 2023 using the R1000R grism, 1277 days after the estimated peak date of the SN. As the spectrum is heavily dominated by the host galaxy, I subtracted a host galaxy spectrum taken by the Sloan Digital Sky Survey (SDSS, \citealt{SDSS-I-II, SDSS_DR4, SDSS_telescope, SDSS_Spectograph}) in 2003, to remove the host contamination. This was done after re-sampling the host spectrum to have the same wavelength spacing as the new spectrum. This left only the spectrum causing the late-time photometry detections, and is shown in Fig. \ref{ZTF20aaifyfx_spec}. I confirmed successful host subtraction by checking for residual \NaID~and \MgI~${\lambda5175}$ absorption lines as these are not expected to be due to the late-time signal but purely from the host galaxy. I found that no residual features of these lines were present.
 
-The resulting spectrum shows an excess that is stronger towards longer wavelengths (Fig.~\ref{ZTF20aaifyfx_spec}). This is consistent with the broadband photometry finding an brighter excess in the redder bands, while the \ztfg-band remains within the noise after binning the observations. There is some excess in the narrow [\NII]~${\lambda\lambda6548,6583}$, \Halpha~and [\SII]~$ {\lambda\lambda6716, 6730}$ emission lines, but I lack the resolution to check if this is significant. There is no visible additional \Halpha~component in the spectrum, which would be indicative of CSM interaction. Integrating the spectrum over the \ztfr- and \ztfi-band efficiencies gives an \ztfr -- \ztfi colour of 0.6 mag, which is within $3\sigma$ of the value found in the latest photometry bin.
+\begin{figure}
+ \centering
+ \includegraphics[width=\textwidth]{../Images/chapter_3/spec_obj.png}
+ \caption{Spectrum of the late-time signal in SN 2020alm in its rest frame. The top panel shows the late-time spectrum obtained on 26 July 2023 using OSIRIS+ on the GTC, and the SDSS spectrum obtained in 2003. The bottom panel shows the late-time excess, obtained by subtracting the SDSS host galaxy spectrum from the observed late-time spectrum. A smoothed spectrum is shown in blue. The smoothing was done using a rolling kernel of size 5 to average over the values. The red lines are a simple TDE model with Milky Way and some amount of host galaxy extinction applied (the amount is shown in the legend), in order to get the approximate shape of the observed spectrum. Narrow emission and absorption lines that were notable in the unsubtracted spectrum are marked with dashed lines. The grey regions are affected by sky lines, and should be ignored. The late-time spectrum of SN 2020alm is available in electronic form at the CDS via anonymous ftp to \url{cdsarc.u-strasbg.fr} (130.79.128.5), via \url{http://cdsweb.u-strasbg.fr/cgi-bin/qcat?J/A+A/ }or upon request to me.}
+ \label{ZTF20aaifyfx_spec}
+\end{figure}
 
-\citet{TDE_host_ext_range} show that TDEs generally have a \ztfg -- \ztfr colour of zero and can have featureless spectra. I approximate a TDE by a flat line in order to estimate the amount of extinction needed to generate a red excess similar to the spectrum. I find that the general shape of the spectrum can be approximated with $0.6 < \text{E(B -- V)}_\text{host} < 1$ mag. This would mean an absolute \ztfr-band magnitude of $-18.8 > M_r > -19.8$ mag. \citet{TDE_host_ext_range} show that both this amount of host extinction and late-time brightness are possible for TDEs. They also show that it is possible for a TDE to rise and fall back down within the 80\,d gap in observations, although this is seen in fainter TDEs than corresponding to my estimated absolute magnitude range.
+The resulting spectrum shows an excess that is stronger towards longer wavelengths. This is consistent with the broadband photometry finding an brighter excess in the redder bands, while the \ztfg-band remains within the noise after binning the observations. There is some excess in the narrow [\NII]~${\lambda\lambda6548,6583}$, \Halpha~and [\SII]~${\lambda\lambda6716,6730}$ emission lines, but I lack the resolution to check if this is significant. There is no visible additional \Halpha~component in the spectrum, which would be indicative of CSM interaction. Integrating the spectrum over the \ztfr- and \ztfi-band efficiencies gives an \ztfr -- \ztfi colour of 0.6 mag, which is within $3\sigma$ of the value found in the latest photometry bin.
+
+\citet{TDE_host_ext_range} show that TDEs generally have a \ztfg -- \ztfr colour of zero and can have featureless spectra. I approximate a TDE by a line of constant flux density and add Milky Way extinction \citep[using the SFD89 dust maps in the direction of the object;][]{SFD98_dust_maps} in order to estimate the amount of extinction needed to generate a red excess similar to the spectrum. I find that the general shape of the spectrum can be approximated with $0.6 < \text{E(B -- V)}_\text{host} < 1$ mag. This would mean an absolute \ztfr-band magnitude of $-18.8 > M_r > -19.8$ mag. \citet{TDE_host_ext_range} show that both this amount of host extinction and late-time brightness are possible for TDEs. They also show that it is possible for a TDE to rise and fall back down within the 80\,d gap in observations, although this is seen in fainter TDEs than corresponding to my estimated absolute magnitude range.
 
 The TDE sample of \citet{TDE_host_ext_range} did not contain a single object that matches my late-time detections in duration and luminosity in SN 2020alm. However, it is possible to combine parts of different TDEs together to make a TDE that peaked and decayed within the 80\,d gap and levelled out by the time it became observable again. Based on this, a TDE is a plausible explanation for the late-time signal detected in this object.\\
 
@@ -470,6 +632,14 @@ By using the estimated mean absolute \ztfr-band magnitude after removing all ext
  \caption{Colour curves of the three candidate objects, together with the colours of the best fitting alternate transients. The top and bottom panels show \ztfg-\ztfr and \ztfr-\ztfi, respectively. The first bin for each object starts at zero days, but the bins can be shifted horizontally in an attempt to better fit the colour curve of the transient compared against (given that this is allowed by the rest of the light curve). Bins whose mean observation dates are closest to each other are used to calculate the colour, provided that these bins overlap in time. If there is a detection in only one band used to calculate the colour while the other is a non-detection, the result is a lower or upper limit.}
  \label{candidate_colours}
 \end{figure*}
+
+\begin{figure}
+ \centering
+ \includegraphics[width=\textwidth]{../Images/chapter_3/candid_plots_smp.png}
+ \caption{Binned SMP light curves of the three candidate objects. As no bins $\geq5\sigma$ are recovered in SN 2018grt, it is not shown here. Both SN 2019ldf and SN 2020tfc do however still have robust detections in some bands. The best fitting alternate transients, shown in dotted lines, are the same as in Fig.~\ref{candidates}. The \ztfi-band of SN 2020tfc is not shown as the background was not subtracted completely, resulting in a significant flux offset.}
+ \label{final_candid_SMP}
+\end{figure}
+
 
 \textit{\textbf{SN 2018grt.}}
 The late-time signal of SN 2018grt is only detected in the \ztfr-band, the \ztfg-band stays around zero flux, and there are no \ztfi-band observations at these phases. The first detection in the \ztfr-band begins at 1350\,d post peak with a magnitude of $21.4\pm0.2$ (absolute magnitude of $-$16.4 mag). It varies little over the $\sim 100$\,d period where it is detected, after which it returns to zero flux within 50\,d. The SN is close to the host nucleus with an offset of 0.35$\arcsec$~(0.32 kpc) but its host colours place it well outside the expected AGN region. Checking the difference images with \textsc{snap} shows that the host nucleus and SN location differ by $\sim$1 pixel. 
@@ -611,186 +781,4 @@ I have presented a search of the ZTF DR2 SN Ia light curve sample for signatures
 The rarity of late-time interaction (occurring in $<$0.5 per cent of SNe Ia) highlights the importance of a large dataset of objects that have been observed for multiple years. The late-time detections occurred at different epochs for each object (from 550 -- 1350\,d post peak), showing that the phase at which SNe Ia will start to show signs of CSM interaction is highly variable. Therefore, the only viable strategy is to keep observing SNe even after they have faded beyond the detection limit and binning the late-time light curves. The interaction strength that the binning technique is sensitive to is heavily dependent on both the science and reference image depth. Future improvements to the analysis would include the use of deeper reference images to detect fainter signatures of late-time interaction, as well as running the pipeline in real time so that additional photometry and spectroscopy can be obtained to further characterise the late-time excesses. The deeper magnitude limits of LSST would be ideal for this study but cannot be immediately performed when the survey starts because of the requirements of deep reference images, as well as the need to wait up to more than three years after the SN Ia peak for the interaction to occur. 
 
 
-%Appendix part
-\section{Tables}
-\tiny
-\begin{longtable}{cccccc}
- \caption{Spectra used to make the SN 2011fe model. All spectra were taken from WISeREP \citep{wiserep}.}
- \label{11fe_sources}
- \endfirsthead
- \hline
- \hline
- MJD  & Phase (d) & Telescope & Instrument & Wavelength coverage (\AA) & Reference    \\
- \hline
- \endhead
- \hline
- \endfoot
- \hline
- \endlastfoot
- \hline
- \hline
- MJD  & Phase (d) & Telescope & Instrument & Wavelength coverage (\AA) & Reference    \\
- \hline
- 55798.0 & $-$16.0 & Lijiang-2.4m & YFOSC & 3461 -- 8956 & \citet{spec_Lijiang-2.4m} \\
- 55798.2 & $-$15.8 & Lick-3m  & KAST & 3416 -- 10278 & \citet{Nugent_1st_Lick_spec} \\
- 55799.0 & $-$15.0 & Lijiang-2.4m & YFOSC & 3502 -- 8958 & \citet{spec_Lijiang-2.4m} \\
- 55799.3 & $-$14.7 & UH88   & SNIFS & 3296 -- 9693 & \citet{spec_UH88} \\
- 55800.2 & $-$13.8 & UH88   & SNIFS & 3296 -- 9693 & \citet{spec_UH88} \\
- 55801.2 & $-$12.8 & UH88   & SNIFS & 3296 -- 9693 & \citet{spec_UH88} \\
- 55802.3 & $-$11.7 & UH88   & SNIFS & 3296 -- 9693 & \citet{spec_UH88} \\
- 55803.2 & $-$10.8 & UH88   & SNIFS & 3296 -- 9693 & \citet{spec_UH88} \\
- 55804.2 & $-$9.8 & UH88   & SNIFS & 3296 -- 9693 & \citet{spec_UH88} \\
- 55805.2 & $-$8.8 & UH88   & SNIFS & 3296 -- 9693 & \citet{spec_UH88} \\
- 55806.2 & $-$7.8 & UH88   & SNIFS & 3296 -- 9693 & \citet{spec_UH88} \\
- 55807.3 & $-$6.7 & UH88   & SNIFS & 3296 -- 9693 & \citet{spec_UH88} \\
- 55808.2 & $-$5.8 & UH88   & SNIFS & 3296 -- 9693 & \citet{spec_UH88} \\
- 55809.2 & $-$4.8 & UH88   & SNIFS & 3296 -- 9693 & \citet{spec_UH88} \\
- 55811.4 & $-$2.6 & HST   & STIS & 1779 -- 24965 & \citet{spec_HST} \\
- 55812.0 & $-$2.0 & Gemini-N  & GMOS & 3497 -- 9648 & \citet{spec_Gemini-N} \\
- 55813.2 & $-$0.8 & UH88   & SNIFS & 3296 -- 9693 & \citet{spec_UH88} \\
- 55814.2 & 0.2 & UH88   & SNIFS & 3296 -- 9693 & \citet{spec_UH88} \\
- 55815.2 & 1.2 & UH88   & SNIFS & 3296 -- 9693 & \citet{spec_UH88} \\
- 55816.2 & 2.2 & UH88   & SNIFS & 3296 -- 9693 & \citet{spec_UH88} \\
- 55817.2 & 3.2 & UH88   & SNIFS & 3296 -- 9693 & \citet{spec_UH88} \\
- 55817.7 & 3.7 & HST   & STIS & 1265 -- 24965 & \citet{spec_HST} \\
- 55818.2 & 4.2 & UH88   & SNIFS & 3296 -- 9693 & \citet{spec_UH88} \\
- 55821.2 & 7.2 & UH88   & SNIFS & 3296 -- 9693 & \citet{spec_UH88} \\
- 55823.2 & 9.2 & UH88   & SNIFS & 3296 -- 9693 & \citet{spec_UH88} \\
- 55826.2 & 12.2 & UH88   & SNIFS & 3296 -- 9693 & \citet{spec_UH88} \\
- 55828.2 & 14.2 & UH88   & SNIFS & 3296 -- 9693 & \citet{spec_UH88} \\
- 55829.0 & 15.0 & Gemini-N  & GMOS & 3497 -- 9643 & \citet{spec_Gemini-N} \\
- 55830.2 & 16.2 & Keck1  & LRIS & 3227 -- 10242 & \citet{spec_Lick-3m} \\
- 55831.2 & 17.2 & UH88   & SNIFS & 3296 -- 9693 & \citet{spec_UH88} \\
- 55832.0 & 18.0 & Lijiang-2.4m & YFOSC & 3577 -- 8957 & \citet{spec_Lijiang-2.4m} \\
- 55833.2 & 19.2 & UH88   & SNIFS & 3296 -- 9693 & \citet{spec_UH88} \\
- 55835.3 & 21.3 & HST   & STIS & 1731 -- 10221 & \citet{spec_HST} \\
- 55836.2 & 22.2 & UH88   & SNIFS & 3296 -- 9693 & \citet{spec_UH88} \\
- 55838.2 & 24.2 & UH88   & SNIFS & 3296 -- 9693 & \citet{spec_UH88} \\
- 55841.3 & 27.3 & HST   & STIS & 1738 -- 10221 & \citet{spec_HST} \\
- 55855.2 & 41.2 & HST   & STIS & 1738 -- 10216 & \citet{spec_HST} \\
- 55888.6 & 74.7 & UH88   & SNIFS & 3296 -- 9693 & \citet{spec_UH88} \\
- 55891.7 & 77.7 & UH88   & SNIFS & 3296 -- 9693 & \citet{spec_UH88} \\
- 55893.6 & 79.7 & UH88   & SNIFS & 3296 -- 9693 & \citet{spec_UH88} \\
- 55896.6 & 82.6 & UH88   & SNIFS & 3296 -- 9693 & \citet{spec_UH88} \\
- 55897.7 & 83.7 & Keck1  & LRIS & 3164 -- 10126 & \citet{spec_Lick-3m} \\
- 55901.6 & 87.6 & UH88   & SNIFS & 3296 -- 9693 & \citet{spec_UH88} \\
- 55903.6 & 89.6 & UH88   & SNIFS & 3296 -- 9693 & \citet{spec_UH88} \\
- 55911.0 & 97.0 & XLT   & BFOSC & 3296 -- 9693 & \citet{spec_Lijiang-2.4m} \\
- 55911.6 & 97.6 & UH88   & SNIFS & 3296 -- 9693 & \citet{spec_UH88} \\
- 55913.5 & 99.5 & Lick-3m  & KAST & 3427 -- 10332 & \citet{spec_Lick-3m} \\
- 55914.0 & 100.0 & WHT-4.2m  & ISIS & 3499 -- 9491 & \citet{WHT_spec_100d} \\
- 55916.0 & 102.0 & WHT-4.2m  & ISIS & 3498 -- 9491 & \citet{PTF_1, PTF_2} \\
- 55917.0 & 103.0 & WHT-4.2m  & ISIS & 3499 -- 9492 & \citet{PTF_1, PTF_2} \\
- 55926.0 & 112.0 & Lijiang-2.4m & YFOSC & 3366 -- 9069 & \citet{spec_Lijiang-2.4m} \\
- 55929.5 & 115.5 & Lick-3m  & KAST & 3426 -- 10170 & \citet{spec_Lick-3m} \\
- 55944.5 & 130.5 & Lick-3m  & KAST & 3453 -- 10088 & \citet{spec_Lick-3m} \\
- 55959.0 & 145.0 & Lick-3m  & KAST & 3497 -- 10000 & \citet{PTF_1, PTF_2} \\
- 55980.4 & 166.4 & Lick-3m  & KAST & 3441 -- 10250 & \citet{spec_Lick-3m} \\
- 55988.0 & 174.0 & WHT-4.2m  & ISIS & 3495 -- 9982 & \citet{spec_WHT-4.2m} \\
- 56019.4 & 205.4 & Lick-3m  & KAST & 3438 -- 10324 & \citet{spec_WHT-4.2m} \\
- 56040.4 & 226.4 & Lick-3m  & KAST & 3437 -- 10178 & \citet{spec_WHT-4.2m} \\
- 56047.0 & 233.0 & Lijiang-2.4m & YFOSC & 3392 -- 9053 & \citet{spec_Lijiang-2.4m} \\
- 56073.0 & 259.0 & WHT-4.2m  & ISIS & 3495 -- 9483 & \citet{spec_WHT-4.2m} \\
- 56103.0 & 289.0 & WHT-4.2m  & ISIS & 3423 -- 10268 & \citet{spec_WHT-4.2m} \\
- 56127.0 & 313.0 & P200   & DBSP & 3197 -- 10991 & \citet{PTF_1, PTF_2} \\
- 56162.2 & 348.2 & Lick-3m  & KAST & 3487 -- 10240 & \citet{spec_WHT-4.2m} \\
- 56194.2 & 380.2 & Keck1  & LRIS & 3232 -- 10268 & \citet{spec_Lick-3m} \\
- 56277.0 & 463.0 & Lijiang-2.4m & YFOSC & 3379 -- 9337 & \citet{spec_Lijiang-2.4m} \\
- 56778.5 & 964.5 & Keck1  & LRIS & 3074 -- 10320 & \citet{spec_Lick-3m+Keck1} \\
- 56831.2 & 1017.2& LBT   & MODS1 & 3098 -- 10487 & \citet{spec_LBT} \\
-\end{longtable}
-\normalsize
-
-\newpage
-
-\begin{table}
- \centering
- \caption{Redshift values where 50 per cent of the simulated SNe were found to have CSM interaction. Strength is the strength of the \Halpha~line compared to the strength detected in SN 2015cp. Start shows how many days after the peak the interaction begins, and duration is in days as well. I fitted sigmoid functions to the results of each simulation in order to find the redshift where 50 per cent of the interactions were recovered, assuming the reference images were of the same depth as the ones used in ZTF or 0.5 or 1 mag deeper. These values are shown in $z_{50} \pm \sigma_{z_{50}}$, and $\chi^2_\text{red}$ shows the quality of the fit.}
- \resizebox{\textwidth}{!}{%Scale table to page width
- \begin{tabular}{cccclcrclcrclcr}
-  \hline
-  \hline
-  &&&& \multicolumn{3}{c}{ZTF references} && \multicolumn{3}{c}{0.5 mag deeper} && \multicolumn{3}{c}{1 mag deeper}\\
-  strength & start & duration && $z_{50}$ & $\sigma_{z_{50}}$ & $\chi^2_\text{red}$ && $z_{50}$ & $\sigma_{z_{50}}$ & $\chi^2_\text{red}$ && $z_{50}$ & $\sigma_{z_{50}}$ & $\chi^2_\text{red}$\\
-  \hline
-  0.0 & -- & -- && 0.0038 & 0.0009 & 0.72 && 0.0042 & 0.0019 & 1.83 && 0.0046 & 0.0032 & 3.47\\
-  0.1 & 100 & 100 && 0.0041 & 0.0008 & 0.83 && 0.0049 & 0.0011 & 1.82 && 0.0049 & 0.0033 & 3.41\\
-  0.1 & 100 & 300 && 0.0050 & 0.0007 & 0.79 && 0.0055 & 0.0014 & 1.79 && 0.0059 & 0.0025 & 3.42\\
-  0.1 & 100 & 500 && 0.0053 & 0.0006 & 0.77 && 0.0062 & 0.0011 & 1.76 && 0.0068 & 0.0018 & 3.44\\
-  0.1 & 200 & 100 && 0.0045 & 0.0007 & 0.78 && 0.0050 & 0.0016 & 1.80 && 0.0054 & 0.0028 & 3.38\\
-  0.1 & 200 & 300 && 0.0053 & 0.0006 & 0.78 && 0.0058 & 0.0014 & 1.79 && 0.0063 & 0.0022 & 3.44\\
-  0.1 & 200 & 500 && 0.0056 & 0.0006 & 0.77 && 0.0066 & 0.0010 & 1.79 && 0.0073 & 0.0016 & 3.47\\
-  0.1 & 300 & 100 && 0.0050 & 0.0006 & 0.80 && 0.0056 & 0.0012 & 1.80 && 0.0059 & 0.0023 & 3.43\\
-  0.1 & 300 & 300 && 0.0052 & 0.0006 & 0.80 && 0.0061 & 0.0044 & 1.78 && 0.0067 & 0.0017 & 3.46\\
-  0.1 & 300 & 500 && 0.0053 & 0.0005 & 0.82 && 0.0060 & 0.0010 & 2.03 && 0.0069 & 0.0016 & 3.53\\
-  0.1 & 500 & 100 && 0.0045 & 0.0007 & 0.82 && 0.0048 & 0.0014 & 2.08 && 0.0054 & 0.0021 & 3.52\\
-  0.1 & 500 & 300 && 0.0050 & 0.0005 & 0.83 && 0.0056 & 0.0010 & 2.09 && 0.0062 & 0.0017 & 3.53\\
-  0.1 & 500 & 500 && 0.0050 & 0.0005 & 0.82 && 0.0057 & 0.0009 & 2.09 && 0.0063 & 0.0017 & 3.52\\
-  1.0 & 100 & 100 && 0.0041 & 0.0007 & 0.86 && 0.0045 & 0.0013 & 2.10 && 0.0046 & 0.0027 & 3.58\\
-  1.0 & 100 & 300 && 0.0091 & 0.0005 & 0.85 && 0.0096 & 0.0012 & 1.98 && 0.0108 & 0.0017 & 3.40\\
-  1.0 & 100 & 500 && 0.0111 & 0.0004 & 0.84 && 0.0129 & 0.0008 & 2.08 && 0.0139 & 0.0013 & 3.50\\
-  1.0 & 200 & 100 && 0.0067 & 0.0007 & 0.80 && 0.0077 & 0.0012 & 2.05 && 0.0083 & 0.0021 & 3.51\\
-  1.0 & 200 & 300 && 0.0104 & 0.0005 & 0.93 && 0.0122 & 0.0008 & 2.06 && 0.0130 & 0.0014 & 3.31\\
-  1.0 & 200 & 500 && 0.0116 & 0.0004 & 0.84 && 0.0129 & 0.0008 & 2.11 && 0.0140 & 0.0018 & 3.63\\
-  1.0 & 300 & 100 && 0.0086 & 0.0004 & 0.78 && 0.0094 & 0.0008 & 1.95 && 0.0100 & 0.0013 & 3.62\\
-  1.0 & 300 & 300 && 0.0105 & 0.0004 & 0.75 && 0.0118 & 0.0007 & 2.02 && 0.0128 & 0.0015 & 3.61\\
-  1.0 & 300 & 500 && 0.0109 & 0.0004 & 0.78 && 0.0125 & 0.0008 & 2.11 && 0.0139 & 0.0013 & 3.76\\
-  1.0 & 500 & 100 && 0.0081 & 0.0003 & 0.83 && 0.0090 & 0.0008 & 1.94 && 0.0094 & 0.0016 & 3.69\\
-  1.0 & 500 & 300 && 0.0104 & 0.0003 & 0.78 && 0.0121 & 0.0007 & 2.10 && 0.0133 & 0.0012 & 3.79\\
-  1.0 & 500 & 500 && 0.0105 & 0.0003 & 0.80 && 0.0122 & 0.0007 & 2.11 && 0.0135 & 0.0012 & 3.80\\
-  10.0 & 100 & 100 && 0.0091 & 0.0014 & 0.93 && 0.0097 & 0.0028 & 2.13 && 0.0087 & 0.0058 & 3.45\\
-  10.0 & 100 & 300 && 0.0259 & 0.0007 & 1.36 && 0.0299 & 0.0009 & 1.79 && 0.0328 & 0.0012 & 1.83\\
-  10.0 & 100 & 500 && 0.0297 & 0.0005 & 1.21 && 0.0347 & 0.0007 & 1.83 && 0.0383 & 0.0010 & 1.84\\
-  10.0 & 200 & 100 && 0.0204 & 0.0009 & 1.69 && 0.0223 & 0.0012 & 2.40 && 0.0217 & 0.0019 & 2.54\\
-  10.0 & 200 & 300 && 0.0314 & 0.0004 & 1.45 && 0.0351 & 0.0007 & 1.98 && 0.0377 & 0.0010 & 2.40\\
-  10.0 & 200 & 500 && 0.0326 & 0.0005 & 1.50 && 0.0374 & 0.0007 & 2.05 && 0.0415 & 0.0009 & 1.95\\
-  10.0 & 300 & 100 && 0.0221 & 0.0023 & 1.21 && 0.0233 & 0.0011 & 2.01 && 0.0231 & 0.0019 & 2.71\\
-  10.0 & 300 & 300 && 0.0311 & 0.0004 & 1.30 && 0.0350 & 0.0007 & 1.90 && 0.0375 & 0.0010 & 2.27\\
-  10.0 & 300 & 500 && 0.0328 & 0.0004 & 1.42 && 0.0381 & 0.0007 & 2.22 && 0.0423 & 0.0009 & 2.21\\
-  10.0 & 500 & 100 && 0.0199 & 0.0011 & 1.80 && 0.0224 & 0.0014 & 2.47 && 0.0226 & 0.0019 & 3.04\\
-  10.0 & 500 & 300 && 0.0323 & 0.0004 & 1.23 && 0.0371 & 0.0007 & 2.12 && 0.0406 & 0.0009 & 2.19\\
-  10.0 & 500 & 500 && 0.0323 & 0.0004 & 1.22 && 0.0373 & 0.0007 & 2.12 && 0.0407 & 0.0009 & 2.12\\
-  \hline
- \end{tabular}
- }
- \label{sim_z50_results}
-\end{table}
-
-\section{Inputs to \textsc{simsurvey} simulations}
-\label{sec:simsurvey_inputs}
-
-The specific inputs to \textsc{simsurvey} used in Section \ref{sim_obs} to determine the detection efficiencies for SN 2015cp-like interaction are listed here. 
-
-\begin{itemize}
- \item Model: SN 2011fe + \Halpha~line (Section \ref{model_description}).
- \item Sky distribution: RA $\in$ [0$^{\circ}$, 360$^{\circ}$], Dec. $\geq -30^{\circ}$ (The area covered by ZTF, \citealt{ZTF_Surveys_Scheduler}).
- \item Volumetric rate: The SN Ia rate is $2.4\times10^{-5}$ Mpc$^{-3}$ yr$^{-1}$ for $z \leq 0.1$ \citep{SNIa_rate}. \textsc{simsurvey} uses this to calculate the amount of SNe to generate at a given redshift interval.
- \item SN peak time distribution: $58\,195 \leq$ modified Julian date (MJD) $\leq 58\,487$ (between 18 March 2018 and 4 January 2019).
- \item Galactic extinction: dust maps from \citet{SFD98_dust_maps}.
- \item Host galaxy extinction: \citet{ccm89_extinction_law} extinction law, with \textit{E(B -- V)} drawn from an exponential distribution with exponent $\lambda=0.11$ \citep{EBV_simsurvey}, the same way as host extinction was added in the original \textsc{simsurvey} paper \citep{simsurvey_main}.
- \item Telescope specifications: ZTF P48 camera, 4$\times$4 grid of CCDs with four readout channels each, resulting in 64 separate output channels \citep{ZTF_Observing_System}.
- \item Survey plan: ZTF observation logs between $58\,197\leq$ MJD $\leq 59\,211$ (between 20 March 2018 and 28 December 2020), ensuring all simulated SNe are followed for a minimum of about 2 years after the peak.
-\end{itemize}
-
-
-\section{Late-time spectrum of SN 2020alm}
-\label{spec_sec}
-After confirming the late-time detections in SN 2020alm to still be ongoing, a spectrum was obtained using OSIRIS+ on the GTC on 26 July 2023, 1277 days after the estimated peak date of the SN. As the observed spectrum is heavily dominated by the host galaxy, I subtracted a host galaxy spectrum taken by SDSS in 2003 to remove the host contamination. This was done after re-sampling the host spectrum to have the same wavelength spacing as the new spectrum. This left only the spectrum causing the late-time photometry detections, and is shown in Fig. \ref{ZTF20aaifyfx_spec}. The subtraction was confirmed to be successful by checking that the \MgI~${\lambda5175}$ and \NaID~absorption lines were reduced to the noise level, as these lines are not expected to be due to the late-time signal but purely from the host galaxy. Some of the host galaxy emission lines were not completely subtracted during this process, most noticeably [\NII]~${\lambda6583}$ and [\SII]~${\lambda\lambda6716,6730}$, but the resolution is inadequate to draw any conclusions from this.
-
-The only explanation for the late-time detections that uses a second transient at the same location is a TDE. \citet{TDE_host_ext_range} shows that the intrinsic spectrum of a TDE is flat in this wavelength range, with sometimes some narrow emission lines. Therefore, I model a TDE spectrum as a line of constant flux density and add Milky Way extinction \citep[using the SFD89 dust maps in the direction of the object; ][]{SFD98_dust_maps} and variable host extinction in an attempt to obtain the general shape of the observed spectrum. I find that $0.6\leq$ $E(B - V)$$_\text{host}\leq1$ mag is adequate to reproduce the general spectral shape and suggests that a TDE with approximately constant colour and moderate host extinction can explain the observed spectral excess for this event.
-
-\begin{figure}
- \centering
- \includegraphics[width=\textwidth]{../Images/chapter_3/spec_obj.png}
- \caption{Spectrum of the late-time signal in SN 2020alm in its rest frame. The top panel shows the late-time spectrum obtained on 26 July 2023 using OSIRIS+ on the GTC, and the SDSS spectrum obtained in 2003. The bottom panel shows the late-time excess, obtained by subtracting the SDSS host galaxy spectrum from the observed late-time spectrum. A smoothed spectrum is shown in blue. The smoothing was done using a rolling kernel of size 5 to average over the values. The red lines are a simple TDE model with Milky Way and some amount of host galaxy extinction applied (the amount is shown in the legend), in order to get the approximate shape of the observed spectrum. Narrow emission and absorption lines that were notable in the unsubtracted spectrum are marked with dashed lines. The grey regions are affected by sky lines, and should be ignored. The late-time spectrum of SN 2020alm is available in electronic form at the CDS via anonymous ftp to \url{cdsarc.u-strasbg.fr} (130.79.128.5), via \url{http://cdsweb.u-strasbg.fr/cgi-bin/qcat?J/A+A/ }or upon request to the author.}
- \label{ZTF20aaifyfx_spec}
-\end{figure}
-
-\section{Binned SMP light curves of the final candidates}
-\begin{figure}
- \centering
- \includegraphics[width=\textwidth]{../Images/chapter_3/candid_plots_smp.png}
- \caption{Binned SMP light curves of the three candidate objects. As no bins $\geq5\sigma$ are recovered in SN 2018grt, it is not shown here. Both SN 2019ldf and SN 2020tfc do however still have robust detections in some bands. The best fitting alternate transients, shown in dotted lines, are the same as in Fig.~\ref{candidates}. The \ztfi-band of SN 2020tfc is not shown as the background was not subtracted completely, resulting in a significant flux offset.}
- \label{final_candid_SMP}
-\end{figure}
 \end{document}

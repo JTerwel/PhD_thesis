@@ -34,11 +34,11 @@ NOTE: List of publications: All papers except the master-related one that I am o
 %%%%%%%%%%%%%%%%%%%%%%%%
 
 |- Chapter 1: Introduction (Adapt from paper intros)
-|   |- Section 1: The final stages of stars
+| v |- Section 1: The final stages of stars
 |   |        General introduction to stellar remnants & SNe
-|   |- Section 2: Type Ia SNe
+| v |- Section 2: Type Ia SNe
 |   |        Type Ia in general & subclasses, introduce progenitor problem
-|   |- Section 3: The Ia-CSM subclass
+| v |- Section 3: The Ia-CSM subclass
 |   |        Ia-CSM in general, SN 2015cp & late interaction,
 |   |        systematic blind spot for late interactions, define aim of the search
 |
@@ -54,7 +54,7 @@ NOTE: List of publications: All papers except the master-related one that I am o
 | 
 |- Chapter 3: A systematic search for late-time rebrightening
 |   |           Short introduction Add that section X has been extended
-| w |- Paper 1: Add with as little editing as possible
+| P |- Paper 1: Add with as little editing as possible
 |       |- Section X: SNAP section, add a snapshot of SNAP
 |
 |- Chapter 4: ZTF observed late-time signals of pre-ZTF transients
@@ -66,8 +66,7 @@ NOTE: List of publications: All papers except the master-related one that I am o
 |               SN 2019zbq: Is it possible to make a host lc to check?
 |
 |- Chapter 6: The next steps
-|   |        Future research to build from this (LSST, other samples)
-|   |        Alternative uses for a pipeline like this (ANT search in nuclei?)
-|   |        Pipeline improvements (Validation check for ANTs if nucleus close)
-|   |        Alternative strategies for searching events like these
-|   |           (If I can think of good ways)
+| v |        Future research to build from this (LSST, other samples)
+| v |        Alternative uses for a pipeline like this (ANT search in nuclei?)
+| v |        Pipeline improvements (Validation check for ANTs if nucleus close)
+| v |        non-pipeline related future research

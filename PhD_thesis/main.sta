@@ -11,4 +11,10 @@
 \subpreamble{chapter_4/pre-ZTF_search.tex}
 \usepackage {setspace}
 \endsubpreamble
+\subpreamble{chapter_5/real-time_search.tex}
+\usepackage {setspace}
+\endsubpreamble
+\subpreamble{chapter_6/Conclusion_and_future.tex}
+\usepackage {setspace}
+\endsubpreamble
 \endstandalonepreambles
