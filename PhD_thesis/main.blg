@@ -10,16 +10,11 @@ A level-1 auxiliary file: chapter_1/introduction.aux
 A level-1 auxiliary file: chapter_2/observing.aux
 A level-1 auxiliary file: chapter_3/DR2_search.aux
 A level-1 auxiliary file: chapter_4/pre-ZTF_search.aux
-Case mismatch error between cite keys PTF11kx and ptf11kx
----line 166 of file chapter_4/pre-ZTF_search.aux
- : \citation{PTF11kx
- :                  ,Inserra_2016}
-I'm skipping whatever remains of this command
 A level-1 auxiliary file: chapter_5/real-time_search.aux
 A level-1 auxiliary file: chapter_6/Conclusion_and_future.aux
 A level-1 auxiliary file: chapter_0/final_acknowledgements.aux
 The style file: aa.bst
-Reallocated field_info (elt_size=4) to 11475 items from 5000.
+Reallocated field_info (elt_size=4) to 11600 items from 5000.
 Database file #1: thesis_references.bib
 Repeated entry---line 879 of file thesis_references.bib
  : @article{Phillips_rel
@@ -27,120 +22,120 @@ Repeated entry---line 879 of file thesis_references.bib
 I'm skipping whatever remains of this entry
 Reallocated str_pool (elt_size=1) to 130000 items from 65000.
 Warning--entry type for "fpbot" isn't style-file defined
---line 2267 of file thesis_references.bib
+--line 2228 of file thesis_references.bib
 Warning--entry type for "astroSCRAPPY" isn't style-file defined
---line 2636 of file thesis_references.bib
+--line 2559 of file thesis_references.bib
 Warning--entry type for "simsurvey" isn't style-file defined
---line 2658 of file thesis_references.bib
+--line 2581 of file thesis_references.bib
 Warning--entry type for "sncosmo" isn't style-file defined
---line 2775 of file thesis_references.bib
+--line 2698 of file thesis_references.bib
 Warning--entry type for "ztffps" isn't style-file defined
---line 2862 of file thesis_references.bib
+--line 2785 of file thesis_references.bib
 Reallocated str_pool (elt_size=1) to 195000 items from 130000.
 Warning--entry type for "pandas_software" isn't style-file defined
---line 3063 of file thesis_references.bib
-Repeated entry---line 3617 of file thesis_references.bib
- : @article{PTF11iqb
- :                  ,
-I'm skipping whatever remains of this entry
-Repeated entry---line 4057 of file thesis_references.bib
+--line 2972 of file thesis_references.bib
+Warning--string name "october" is undefined
+--line 3333 of file thesis_references.bib
+Repeated entry---line 3993 of file thesis_references.bib
  : @article{2017gmr
  :                 ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 4171 of file thesis_references.bib
+Repeated entry---line 4107 of file thesis_references.bib
  : @article{2020ohl_Hinkle
  :                        ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 4191 of file thesis_references.bib
+Repeated entry---line 4127 of file thesis_references.bib
  : @article{IIp_ext
  :                 ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 4209 of file thesis_references.bib
+Repeated entry---line 4145 of file thesis_references.bib
  : @article{02ic_H_det
  :                    ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 4221 of file thesis_references.bib
+Repeated entry---line 4157 of file thesis_references.bib
  : @article{Hamuy_02ic
  :                    ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 4239 of file thesis_references.bib
+Repeated entry---line 4175 of file thesis_references.bib
  : @article{02ic_slow_decay
  :                         ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 4257 of file thesis_references.bib
+Repeated entry---line 4193 of file thesis_references.bib
  : @article{2005gj
  :                ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 4275 of file thesis_references.bib
+Repeated entry---line 4211 of file thesis_references.bib
  : @article{Kool_He_CSM
  :                     ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 4691 of file thesis_references.bib
+Repeated entry---line 4627 of file thesis_references.bib
  : @article{CLAGN
  :               ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 4772 of file thesis_references.bib
+Repeated entry---line 4708 of file thesis_references.bib
  : @article{Hinkle_MIR_ANT_echo
  :                             ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 4790 of file thesis_references.bib
+Repeated entry---line 4726 of file thesis_references.bib
  : @article{Hinkle_Extreme_nuclear_transients/ANTs
  :                                                ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 4807 of file thesis_references.bib
+Repeated entry---line 4743 of file thesis_references.bib
  : @article{Kankare_ANT
  :                     ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 4824 of file thesis_references.bib
+Repeated entry---line 4760 of file thesis_references.bib
  : @article{wiseman_ztfants
  :                         ,
 I'm skipping whatever remains of this entry
 Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
 Warning--can't use both author and editor fields in SN_large_pic
 Warning--empty publisher in SN_large_pic
+Warning--empty publisher in Image_processing
 Warning--empty publisher in 2024gy_z
+Warning--empty publisher in CCD_handbook
 Warning--empty publisher in starstruct
 Warning--can't use both author and editor fields in Taubenberger_plot
 Warning--empty publisher in Taubenberger_plot
-You've used 259 entries,
+You've used 264 entries,
             3039 wiz_defined-function locations,
-            2353 strings with 172059 characters,
-and the built_in function-call counts, 395093 in all, are:
-= -- 27800
-> -- 60928
-< -- 53
-+ -- 20375
-- -- 20100
-* -- 39345
-:= -- 74773
-add.period$ -- 259
-call.type$ -- 259
-change.case$ -- 7731
-chr.to.int$ -- 245
-cite$ -- 265
-duplicate$ -- 4717
-empty$ -- 7045
-format.name$ -- 20685
-if$ -- 76498
-int.to.chr$ -- 15
+            2401 strings with 174618 characters,
+and the built_in function-call counts, 393306 in all, are:
+= -- 27723
+> -- 60345
+< -- 59
++ -- 20173
+- -- 19899
+* -- 39075
+:= -- 74422
+add.period$ -- 264
+call.type$ -- 264
+change.case$ -- 7684
+chr.to.int$ -- 254
+cite$ -- 272
+duplicate$ -- 4807
+empty$ -- 7176
+format.name$ -- 20503
+if$ -- 76170
+int.to.chr$ -- 11
 int.to.str$ -- 1
-missing$ -- 246
-newline$ -- 781
-num.names$ -- 1042
-pop$ -- 7686
+missing$ -- 250
+newline$ -- 796
+num.names$ -- 1062
+pop$ -- 7643
 preamble$ -- 1
-purify$ -- 7731
+purify$ -- 7684
 quote$ -- 0
-skip$ -- 4335
+skip$ -- 4427
 stack$ -- 0
-substring$ -- 6183
-swap$ -- 74
-text.length$ -- 3
+substring$ -- 6247
+swap$ -- 67
+text.length$ -- 4
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 2319
-warning$ -- 6
-while$ -- 1031
+type$ -- 2358
+warning$ -- 8
+while$ -- 1048
 width$ -- 0
-write$ -- 2561
-(There were 16 error messages)
+write$ -- 2609
+(There were 14 error messages)

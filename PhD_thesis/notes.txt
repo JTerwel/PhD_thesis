@@ -62,7 +62,7 @@ NOTE: List of publications: All papers except the master-related one that I am o
 |
 |- Chapter 5: A real-time search for Type Ia SNe with late-time CSM interaction in
 |             ZTF
-| m |- Paper 3: Won't be ready in time, adapt directly to thesis
+| v |- Paper 3: Won't be ready in time, adapt directly to thesis
 |               SN 2019zbq: Is it possible to make a host lc to check?
 |
 |- Chapter 6: The next steps
@@ -70,3 +70,26 @@ NOTE: List of publications: All papers except the master-related one that I am o
 | v |        Alternative uses for a pipeline like this (ANT search in nuclei?)
 | v |        Pipeline improvements (Validation check for ANTs if nucleus close)
 | v |        non-pipeline related future research
+
+
+
+%%%%%%%%%%%%%%
+% To-do list %
+%%%%%%%%%%%%%%
+
+V Write abstract (1-2 pages)
+V Write dedication
+V Figure out what exact name to put on the cover
+- Write acknowledgement (1 page)
+V Add references and do a final rewrite of the Observing chapter
+V Check for any left red text and fix them
+V Check chapter introductions and fix them if needed
+- Spell-check (carefully and rigorously)
+- search for the obvious ‘the the’ and check definitions (SN, ZTF) are only defined once per chapter etc.
+- Make sure all citations work properly
+V Check for double citations and fix
+- Check for any other broken links / references etc.
+- Make sure that the LateX errors and warnings are for nothing important
+- Check with TCD style guide that everything is correct
+- Fix layout for each chapter
+- Final read for last checks
