@@ -1,4 +1,4 @@
-\begin{thebibliography}{259}
+\begin{thebibliography}{264}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 
 \bibitem[{{Aamer} {et~al.}(2024){Aamer}, {Nicholl}, {Jerkstrand}, {Gomez},
@@ -220,6 +220,10 @@ Barbary, K., Bailey, S., Barentsen, G., {et~al.} 2021, SNCosmo
   {Zolkower}}]{ZTF_overview_and_1st_results}
 {Bellm}, E.~C., {Kulkarni}, S.~R., {Graham}, M.~J., {et~al.}
   2019{\natexlab{b}}, \pasp, 131, 018002
+
+\bibitem[{{Berry} \& {Burnell}(2000)}]{Image_processing}
+{Berry}, R. \& {Burnell}, J. 2000, {The handbook of astronomical image
+  processing}
 
 \bibitem[{{Biswas} {et~al.}(2022){Biswas}, {Goobar}, {Dhawan}, {Schulze},
   {Johansson}, {Bellm}, {Dekany}, {Drake}, {Duev}, {Fremling}, {Graham}, {Kim},
@@ -488,12 +492,6 @@ Duev, D.~A., Mahabal, A., Masci, F.~J., {et~al.} 2019, Monthly Notices of the
 {Feindt}, U., {Nordin}, J., {Rigault}, M., {et~al.} 2019{\natexlab{b}}, \jcap,
   2019, 005
 
-\bibitem[{{Ferretti} {et~al.}(2016){Ferretti}, {Amanullah}, {Goobar},
-  {Johansson}, {Vreeswijk}, {Butler}, {Cao}, {Cenko}, {Doran}, {Filippenko},
-  {Freeland}, {Hosseinzadeh}, {Howell}, {Lundqvist}, {Mattila}, {Nordin},
-  {Nugent}, {Petrushevska}, {Valenti}, {Vogt}, \& {Wozniak}}]{2013gh_NaID}
-{Ferretti}, R., {Amanullah}, R., {Goobar}, A., {et~al.} 2016, \aap, 592, A40
-
 \bibitem[{{Filippenko}(1982)}]{diff_refrac_atmosphere}
 {Filippenko}, A.~V. 1982, \pasp, 94, 715
 
@@ -527,25 +525,14 @@ Duev, D.~A., Mahabal, A., Masci, F.~J., {et~al.} 2019, Monthly Notices of the
   {Wainscoat}, \& {Waters}}]{2011ht}
 {Fraser}, M., {Magee}, M., {Kotak}, R., {et~al.} 2013, \apjl, 779, L8
 
-\bibitem[{{Fremling} {et~al.}(2020{\natexlab{a}}){Fremling}, {Miller},
-  {Sharma}, {Dugas}, {Perley}, {Taggart}, {Sollerman}, {Goobar}, {Graham},
-  {Neill}, {Nordin}, {Rigault}, {Walters}, {Andreoni}, {Bagdasaryan},
-  {Belicki}, {Cannella}, {Bellm}, {Cenko}, {De}, {Dekany}, {Frederick},
-  {Golkhou}, {Graham}, {Helou}, {Ho}, {Kasliwal}, {Kupfer}, {Laher}, {Mahabal},
-  {Masci}, {Riddle}, {Rusholme}, {Schulze}, {Shupe}, {Smith}, {van Velzen},
-  {Yan}, {Yao}, {Zhuang}, \& {Kulkarni}}]{BTS-I}
-{Fremling}, C., {Miller}, A.~A., {Sharma}, Y., {et~al.} 2020{\natexlab{a}},
-  \apj, 895, 32
-
-\bibitem[{{Fremling} {et~al.}(2020{\natexlab{b}}){Fremling}, {Miller},
-  {Sharma}, {Dugas}, {Perley}, {Taggart}, {Sollerman}, {Goobar}, {Graham},
-  {Neill}, {Nordin}, {Rigault}, {Walters}, {Andreoni}, {Bagdasaryan},
-  {Belicki}, {Cannella}, {Bellm}, {Cenko}, {De}, {Dekany}, {Frederick},
-  {Golkhou}, {Graham}, {Helou}, {Ho}, {Kasliwal}, {Kupfer}, {Laher}, {Mahabal},
-  {Masci}, {Riddle}, {Rusholme}, {Schulze}, {Shupe}, {Smith}, {van Velzen},
-  {Yan}, {Yao}, {Zhuang}, \& {Kulkarni}}]{BTS_I}
-{Fremling}, C., {Miller}, A.~A., {Sharma}, Y., {et~al.} 2020{\natexlab{b}},
-  \apj, 895, 32
+\bibitem[{{Fremling} {et~al.}(2020){Fremling}, {Miller}, {Sharma}, {Dugas},
+  {Perley}, {Taggart}, {Sollerman}, {Goobar}, {Graham}, {Neill}, {Nordin},
+  {Rigault}, {Walters}, {Andreoni}, {Bagdasaryan}, {Belicki}, {Cannella},
+  {Bellm}, {Cenko}, {De}, {Dekany}, {Frederick}, {Golkhou}, {Graham}, {Helou},
+  {Ho}, {Kasliwal}, {Kupfer}, {Laher}, {Mahabal}, {Masci}, {Riddle},
+  {Rusholme}, {Schulze}, {Shupe}, {Smith}, {van Velzen}, {Yan}, {Yao},
+  {Zhuang}, \& {Kulkarni}}]{BTS_I}
+{Fremling}, C., {Miller}, A.~A., {Sharma}, Y., {et~al.} 2020, \apj, 895, 32
 
 \bibitem[{{Friesen} {et~al.}(2017){Friesen}, {Baron}, {Parrent}, {Thomas},
   {Branch}, {Nugent}, {Hauschildt}, {Foley}, {Wright}, {Pan}, {Filippenko},
@@ -716,6 +703,12 @@ Duev, D.~A., Mahabal, A., Masci, F.~J., {et~al.} 2019, Monthly Notices of the
 {Ginolin}, M., {Rigault}, M., {Smith}, M., {et~al.} 2024{\natexlab{b}}, arXiv
   e-prints, arXiv:2405.20965
 
+\bibitem[{{Gobierbo de España}(1988)}]{LP_Sky_law}
+{Gobierbo de España}. 1988, Ley 31/1988, de 31 de octubre, sobre Protección
+  de la Calidad Astronómica de los Observatorios del Instituto de Astrofísica
+  de Canarias, Boletín Oficial del Estado, núm. 262, de 1 de noviembre de
+  1988, pp. 31203-31205
+
 \bibitem[{{Graham} {et~al.}(2019{\natexlab{a}}){Graham}, {Kulkarni}, {Bellm},
   {Adams}, {Barbarino}, {Blagorodnova}, {Bodewits}, {Bolin}, {Brady}, {Cenko},
   {Chang}, {Coughlin}, {De}, {Eadie}, {Farnham}, {Feindt}, {Franckowiak},
@@ -822,17 +815,10 @@ Duev, D.~A., Mahabal, A., Masci, F.~J., {et~al.} 2019, Monthly Notices of the
 {Hamuy}, M., {Phillips}, M.~M., {Suntzeff}, N.~B., {et~al.} 2003{\natexlab{b}},
   \nat, 424, 651
 
-\bibitem[{{Harris} {et~al.}(2018{\natexlab{a}}){Harris}, {Nugent}, {Horesh},
-  {Bright}, {Fender}, {Graham}, {Maguire}, {Smith}, {Butler}, {Valenti},
-  {Filippenko}, {Fox}, {Goobar}, {Kelly}, \& {Shen}}]{2018ApJ...868...21H}
-{Harris}, C.~E., {Nugent}, P.~E., {Horesh}, A., {et~al.} 2018{\natexlab{a}},
-  \apj, 868, 21
-
-\bibitem[{{Harris} {et~al.}(2018{\natexlab{b}}){Harris}, {Nugent}, {Horesh},
-  {Bright}, {Fender}, {Graham}, {Maguire}, {Smith}, {Butler}, {Valenti},
-  {Filippenko}, {Fox}, {Goobar}, {Kelly}, \& {Shen}}]{2015cp_radio}
-{Harris}, C.~E., {Nugent}, P.~E., {Horesh}, A., {et~al.} 2018{\natexlab{b}},
-  \apj, 868, 21
+\bibitem[{{Harris} {et~al.}(2018){Harris}, {Nugent}, {Horesh}, {Bright},
+  {Fender}, {Graham}, {Maguire}, {Smith}, {Butler}, {Valenti}, {Filippenko},
+  {Fox}, {Goobar}, {Kelly}, \& {Shen}}]{2015cp_radio}
+{Harris}, C.~E., {Nugent}, P.~E., {Horesh}, A., {et~al.} 2018, \apj, 868, 21
 
 \bibitem[{{Harris} {et~al.}(2016){Harris}, {Nugent}, \&
   {Kasen}}]{CSM_models_Harris}
@@ -897,6 +883,9 @@ Harris, C.~R., Millman, K.~J., van~der Walt, S.~J., {et~al.} 2020, Nature, 585,
   {Hsiao}, {Neill}, {Pain}, {Perrett}, \& {Pritchet}}]{2003fg_SuperCh}
 {Howell}, D.~A., {Sullivan}, M., {Nugent}, P.~E., {et~al.} 2006, \nat, 443, 308
 
+\bibitem[{{Howell}(2006)}]{CCD_handbook}
+{Howell}, S.~B. 2006, {Handbook of CCD Astronomy}, Vol.~5
+
 \bibitem[{{Hoyle} \& {Fowler}(1960)}]{Ia_thermonuclear}
 {Hoyle}, F. \& {Fowler}, W.~A. 1960, \apj, 132, 565
 
@@ -910,19 +899,11 @@ Hunter, J.~D. 2007, Computing in Science \& Engineering, 9, 90
 \bibitem[{{Iben} \& {Tutukov}(1984)}]{Iben_Double_degenerate}
 {Iben}, I., J. \& {Tutukov}, A.~V. 1984, \apjs, 54, 335
 
-\bibitem[{{Inserra} {et~al.}(2016{\natexlab{a}}){Inserra}, {Fraser}, {Smartt},
-  {Benetti}, {Chen}, {Childress}, {Gal-Yam}, {Howell}, {Kangas}, {Pignata},
-  {Polshaw}, {Sullivan}, {Smith}, {Valenti}, {Young}, {Parker}, {Seccull}, \&
-  {McCrum}}]{2012ca_Ia-CSM/IIn}
-{Inserra}, C., {Fraser}, M., {Smartt}, S.~J., {et~al.} 2016{\natexlab{a}},
-  \mnras, 459, 2721
-
-\bibitem[{{Inserra} {et~al.}(2016{\natexlab{b}}){Inserra}, {Fraser}, {Smartt},
-  {Benetti}, {Chen}, {Childress}, {Gal-Yam}, {Howell}, {Kangas}, {Pignata},
-  {Polshaw}, {Sullivan}, {Smith}, {Valenti}, {Young}, {Parker}, {Seccull}, \&
+\bibitem[{{Inserra} {et~al.}(2016){Inserra}, {Fraser}, {Smartt}, {Benetti},
+  {Chen}, {Childress}, {Gal-Yam}, {Howell}, {Kangas}, {Pignata}, {Polshaw},
+  {Sullivan}, {Smith}, {Valenti}, {Young}, {Parker}, {Seccull}, \&
   {McCrum}}]{Inserra_2016}
-{Inserra}, C., {Fraser}, M., {Smartt}, S.~J., {et~al.} 2016{\natexlab{b}},
-  \mnras, 459, 2721
+{Inserra}, C., {Fraser}, M., {Smartt}, S.~J., {et~al.} 2016, \mnras, 459, 2721
 
 \bibitem[{{Irani} {et~al.}(2022){Irani}, {Prentice}, {Schulze}, {Gal-Yam},
   {Teffs}, {Mazzali}, {Sollerman}, {Gonzalez}, {Taggart}, {De}, {Fremling},
@@ -1023,11 +1004,6 @@ Hunter, J.~D. 2007, Computing in Science \& Engineering, 9, 90
 
 \bibitem[{{Kashi} \& {Soker}(2011)}]{Kashi_core_deg}
 {Kashi}, A. \& {Soker}, N. 2011, \mnras, 417, 1466
-
-\bibitem[{Kasliwal {et~al.}(2019)Kasliwal, Cannella, Bagdasaryan, Hung, Feindt,
-  Singer, Coughlin, Fremling, Walters, Duev, Itoh, \& Quimby}]{Kasliwal_Growth}
-Kasliwal, M.~M., Cannella, C., Bagdasaryan, A., {et~al.} 2019, Publications of
-  the Astronomical Society of the Pacific, 131, 038003
 
 \bibitem[{{Kasliwal} {et~al.}(2019){Kasliwal}, {Cannella}, {Bagdasaryan},
   {Hung}, {Feindt}, {Singer}, {Coughlin}, {Fremling}, {Walters}, {Duev},
@@ -1222,6 +1198,12 @@ McCully, C., Crawford, S., Kovacs, G., {et~al.} 2018, astropy/astroscrappy:
   {Kulkarni}}]{Miller_baseline_corr}
 {Miller}, A.~A., {Yao}, Y., {Bulla}, M., {et~al.} 2020, \apj, 902, 47
 
+\bibitem[{{Mirizzi} {et~al.}(2016){Mirizzi}, {Tamborra}, {Janka}, {Saviano},
+  {Scholberg}, {Bollig}, {H{\"u}depohl}, \&
+  {Chakraborty}}]{CCSN_neutrino_overview}
+{Mirizzi}, A., {Tamborra}, I., {Janka}, H.~T., {et~al.} 2016, Nuovo Cimento
+  Rivista Serie, 39, 1
+
 \bibitem[{{Mochkovitch}(1983)}]{WD_crystal_Mochkovitch}
 {Mochkovitch}, R. 1983, \aap, 122, 212
 
@@ -1273,6 +1255,13 @@ pandas~development team, T. 2020, pandas-dev/pandas: Pandas
 \bibitem[{{Patat}(2005)}]{Patat_light_echoes}
 {Patat}, F. 2005, \mnras, 357, 1161
 
+\bibitem[{{Patat} {et~al.}(2007){Patat}, {Chandra}, {Chevalier}, {Justham},
+  {Podsiadlowski}, {Wolf}, {Gal-Yam}, {Pasquini}, {Crawford}, {Mazzali},
+  {Pauldrach}, {Nomoto}, {Benetti}, {Cappellaro}, {Elias-Rosa}, {Hillebrandt},
+  {Leonard}, {Pastorello}, {Renzini}, {Sabbadin}, {Simon}, \&
+  {Turatto}}]{2006X}
+{Patat}, F., {Chandra}, P., {Chevalier}, R., {et~al.} 2007, Science, 317, 924
+
 \bibitem[{{Patat} {et~al.}(2013){Patat}, {Cordiner}, {Cox}, {Anderson},
   {Harutyunyan}, {Kotak}, {Palaversa}, {Stanishev}, {Tomasella}, {Benetti},
   {Goobar}, {Pastorello}, \& {Sollerman}}]{extinction_Av}
@@ -1302,23 +1291,13 @@ pandas~development team, T. 2020, pandas-dev/pandas: Pandas
   {Kiewe}, \& {Poznanski}}]{Ca-rich_2010}
 {Perets}, H.~B., {Gal-Yam}, A., {Mazzali}, P.~A., {et~al.} 2010, \nat, 465, 322
 
-\bibitem[{{Perley} {et~al.}(2020{\natexlab{a}}){Perley}, {Fremling},
-  {Sollerman}, {Miller}, {Dahiwale}, {Sharma}, {Bellm}, {Biswas}, {Brink},
-  {Bruch}, {De}, {Dekany}, {Drake}, {Duev}, {Filippenko}, {Gal-Yam}, {Goobar},
-  {Graham}, {Graham}, {Ho}, {Irani}, {Kasliwal}, {Kim}, {Kulkarni}, {Mahabal},
-  {Masci}, {Modak}, {Neill}, {Nordin}, {Riddle}, {Soumagnac}, {Strotjohann},
-  {Schulze}, {Taggart}, {Tzanidakis}, {Walters}, \& {Yan}}]{BTS-II}
-{Perley}, D.~A., {Fremling}, C., {Sollerman}, J., {et~al.} 2020{\natexlab{a}},
-  \apj, 904, 35
-
-\bibitem[{{Perley} {et~al.}(2020{\natexlab{b}}){Perley}, {Fremling},
-  {Sollerman}, {Miller}, {Dahiwale}, {Sharma}, {Bellm}, {Biswas}, {Brink},
-  {Bruch}, {De}, {Dekany}, {Drake}, {Duev}, {Filippenko}, {Gal-Yam}, {Goobar},
-  {Graham}, {Graham}, {Ho}, {Irani}, {Kasliwal}, {Kim}, {Kulkarni}, {Mahabal},
-  {Masci}, {Modak}, {Neill}, {Nordin}, {Riddle}, {Soumagnac}, {Strotjohann},
-  {Schulze}, {Taggart}, {Tzanidakis}, {Walters}, \& {Yan}}]{BTS_II}
-{Perley}, D.~A., {Fremling}, C., {Sollerman}, J., {et~al.} 2020{\natexlab{b}},
-  \apj, 904, 35
+\bibitem[{{Perley} {et~al.}(2020){Perley}, {Fremling}, {Sollerman}, {Miller},
+  {Dahiwale}, {Sharma}, {Bellm}, {Biswas}, {Brink}, {Bruch}, {De}, {Dekany},
+  {Drake}, {Duev}, {Filippenko}, {Gal-Yam}, {Goobar}, {Graham}, {Graham}, {Ho},
+  {Irani}, {Kasliwal}, {Kim}, {Kulkarni}, {Mahabal}, {Masci}, {Modak}, {Neill},
+  {Nordin}, {Riddle}, {Soumagnac}, {Strotjohann}, {Schulze}, {Taggart},
+  {Tzanidakis}, {Walters}, \& {Yan}}]{BTS_II}
+{Perley}, D.~A., {Fremling}, C., {Sollerman}, J., {et~al.} 2020, \apj, 904, 35
 
 \bibitem[{{Perley} {et~al.}(2021){Perley}, {Schulze}, {Fremling}, {Sollerman},
   {Dahiwale}, \& {Gal-Yam}}]{2020aekp_reclassif}
@@ -1375,6 +1354,10 @@ pandas~development team, T. 2020, pandas-dev/pandas: Pandas
   {Zacchei}, \& {Zonca}}]{Planck18VI}
 {Planck Collaboration}, {Aghanim}, N., {Akrami}, Y., {et~al.} 2020, \aap, 641,
   A6
+
+\bibitem[{{Podsiadlowski} {et~al.}(1992){Podsiadlowski}, {Joss}, \&
+  {Hsu}}]{He-star_pre_SN_evol_binaries}
+{Podsiadlowski}, P., {Joss}, P.~C., \& {Hsu}, J.~J.~L. 1992, \apj, 391, 246
 
 \bibitem[{{Popovic} {et~al.}(2024){Popovic}, {Rigault}, {Smith}, {Ginolin},
   {Goobar}, {Kenworthy}, {Ganot}, {Ruppin}, {Dimitriadis}, {Johansson},
@@ -1634,22 +1617,23 @@ Shappee, B.~J., Stanek, K.~Z., Kochanek, C.~S., \& Garnavich, P.~M. 2017, The
   {Brink}, {Kelly}, {Yuk}, \& {Jencson}}]{2015da_2024}
 {Smith}, N., {Andrews}, J.~E., {Milne}, P., {et~al.} 2024, \mnras, 530, 405
 
-\bibitem[{{Smith} {et~al.}(2015{\natexlab{a}}){Smith}, {Mauerhan}, {Cenko},
-  {Kasliwal}, {Silverman}, {Filippenko}, {Gal-Yam}, {Clubb}, {Graham},
-  {Leonard}, {Horst}, {Williams}, {Andrews}, {Kulkarni}, {Nugent}, {Sullivan},
-  {Maguire}, {Xu}, \& {Ben-Ami}}]{PTF11iqb}
-{Smith}, N., {Mauerhan}, J.~C., {Cenko}, S.~B., {et~al.} 2015{\natexlab{a}},
-  \mnras, 449, 1876
-
-\bibitem[{{Smith} {et~al.}(2015{\natexlab{b}}){Smith}, {Mauerhan}, {Cenko},
-  {Kasliwal}, {Silverman}, {Filippenko}, {Gal-Yam}, {Clubb}, {Graham},
-  {Leonard}, {Horst}, {Williams}, {Andrews}, {Kulkarni}, {Nugent}, {Sullivan},
-  {Maguire}, {Xu}, \& {Ben-Ami}}]{IIn_asym_CSM}
-{Smith}, N., {Mauerhan}, J.~C., {Cenko}, S.~B., {et~al.} 2015{\natexlab{b}},
-  \mnras, 449, 1876
+\bibitem[{{Smith} {et~al.}(2015){Smith}, {Mauerhan}, {Cenko}, {Kasliwal},
+  {Silverman}, {Filippenko}, {Gal-Yam}, {Clubb}, {Graham}, {Leonard}, {Horst},
+  {Williams}, {Andrews}, {Kulkarni}, {Nugent}, {Sullivan}, {Maguire}, {Xu}, \&
+  {Ben-Ami}}]{PTF11iqb}
+{Smith}, N., {Mauerhan}, J.~C., {Cenko}, S.~B., {et~al.} 2015, \mnras, 449,
+  1876
 
 \bibitem[{{Soker}(2015)}]{2014J_core_deg}
 {Soker}, N. 2015, \mnras, 450, 1333
+
+\bibitem[{{Solar} {et~al.}(2024){Solar}, {Micha{\l}owski}, {Nadolny},
+  {Galbany}, {Hjorth}, {Zapartas}, {Sollerman}, {Hunt}, {Klose}, {Koprowski},
+  {Le{\'s}niewska}, {Ma{\l}kowski}, {Nicuesa Guelbenzu}, {Ryzhov}, {Savaglio},
+  {Schady}, {Schulze}, {de Ugarte Postigo}, {Vergani}, {Watson}, \&
+  {Wr{\'o}blewski}}]{Ic_binary_progenitors}
+{Solar}, M., {Micha{\l}owski}, M.~J., {Nadolny}, J., {et~al.} 2024, Nature
+  Communications, 15, 7667
 
 \bibitem[{{Sollerman} {et~al.}(2019){Sollerman}, {Taddia}, {Arcavi},
   {Fremling}, {Fransson}, {Burke}, {Cenko}, {Andersen}, {Andreoni},
@@ -1693,6 +1677,13 @@ Shappee, B.~J., Stanek, K.~Z., Kochanek, C.~S., \& Garnavich, P.~M. 2017, The
   {Wiersema}}]{GOTO_prototype}
 {Steeghs}, D., {Galloway}, D.~K., {Ackley}, K., {et~al.} 2022, \mnras, 511,
   2405
+
+\bibitem[{{Sternberg} {et~al.}(2011){Sternberg}, {Gal-Yam}, {Simon}, {Leonard},
+  {Quimby}, {Phillips}, {Morrell}, {Thompson}, {Ivans}, {Marshall},
+  {Filippenko}, {Marcy}, {Bloom}, {Patat}, {Foley}, {Yong}, {Penprase},
+  {Beeler}, {Allende Prieto}, \& {Stringfellow}}]{Sternberg_NaID}
+{Sternberg}, A., {Gal-Yam}, A., {Simon}, J.~D., {et~al.} 2011, Science, 333,
+  856
 
 \bibitem[{{Stritzinger} {et~al.}(2006){Stritzinger}, {Mazzali}, {Sollerman}, \&
   {Benetti}}]{Ia_Ni56_yield}
@@ -1791,6 +1782,12 @@ van~der Walt, S.~J., Crellin-Quick, A., \& Bloom, J.~S. 2019, Journal of Open
 \bibitem[{{van Dokkum}(2001)}]{lacosmic}
 {van Dokkum}, P.~G. 2001, \pasp, 113, 1420
 
+\bibitem[{{Van Dyk} {et~al.}(2023){Van Dyk}, {de Graw}, {Baer-Way}, {Zheng},
+  {Filippenko}, {Fox}, {Smith}, {Brink}, {de Jaeger}, {Kelly}, \&
+  {Vasylyev}}]{CCSN_disappeared_progenitor}
+{Van Dyk}, S.~D., {de Graw}, A., {Baer-Way}, R., {et~al.} 2023, \mnras, 519,
+  471
+
 \bibitem[{{van Velzen} {et~al.}(2021){van Velzen}, {Gezari}, {Hammerstein},
   {Roth}, {Frederick}, {Ward}, {Hung}, {Cenko}, {Stein}, {Perley}, {Taggart},
   {Foley}, {Sollerman}, {Blagorodnova}, {Andreoni}, {Bellm}, {Brinnel}, {De},
@@ -1844,6 +1841,10 @@ van~der Walt, S.~J., Crellin-Quick, A., \& Bloom, J.~S. 2019, Journal of Open
 \bibitem[{{Wood-Vasey} {et~al.}(2004){Wood-Vasey}, {Wang}, \&
   {Aldering}}]{02ic_slow_decay}
 {Wood-Vasey}, W.~M., {Wang}, L., \& {Aldering}, G. 2004, \apj, 616, 339
+
+\bibitem[{{Woosley} {et~al.}(1995){Woosley}, {Langer}, \&
+  {Weaver}}]{He-star_pre_SN_evol_mass_loss}
+{Woosley}, S.~E., {Langer}, N., \& {Weaver}, T.~A. 1995, \apj, 448, 315
 
 \bibitem[{{Wright} {et~al.}(2010){Wright}, {Eisenhardt}, {Mainzer}, {Ressler},
   {Cutri}, {Jarrett}, {Kirkpatrick}, {Padgett}, {McMillan}, {Skrutskie},
@@ -1909,6 +1910,12 @@ van~der Walt, S.~J., Crellin-Quick, A., \& Bloom, J.~S. 2019, Journal of Open
   {Weinberg}, {Yanny}, {Yasuda}, \& {SDSS Collaboration}}]{SDSS-I-II}
 {York}, D.~G., {Adelman}, J., {Anderson}, John~E., J., {et~al.} 2000, \aj, 120,
   1579
+
+\bibitem[{{Zackay} \& {Ofek}(2017{\natexlab{a}})}]{Stacking_I}
+{Zackay}, B. \& {Ofek}, E.~O. 2017{\natexlab{a}}, \apj, 836, 187
+
+\bibitem[{{Zackay} \& {Ofek}(2017{\natexlab{b}})}]{Stacking_II}
+{Zackay}, B. \& {Ofek}, E.~O. 2017{\natexlab{b}}, \apj, 836, 188
 
 \bibitem[{{Zackay} {et~al.}(2016){Zackay}, {Ofek}, \& {Gal-Yam}}]{ZOGY}
 {Zackay}, B., {Ofek}, E.~O., \& {Gal-Yam}, A. 2016, \apj, 830, 27
