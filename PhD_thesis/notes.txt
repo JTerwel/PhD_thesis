@@ -34,42 +34,41 @@ NOTE: List of publications: All papers except the master-related one that I am o
 %%%%%%%%%%%%%%%%%%%%%%%%
 
 |- Chapter 1: Introduction (Adapt from paper intros)
-| v |- Section 1: The final stages of stars
+| V |- Section 1: The final stages of stars
 |   |        General introduction to stellar remnants & SNe
-| v |- Section 2: Type Ia SNe
+| V |- Section 2: Type Ia SNe
 |   |        Type Ia in general & subclasses, introduce progenitor problem
-| v |- Section 3: The Ia-CSM subclass
+| V |- Section 3: The Ia-CSM subclass
 |   |        Ia-CSM in general, SN 2015cp & late interaction,
 |   |        systematic blind spot for late interactions, define aim of the search
 |
 |- Chapter 2: Observing in the optical regime (ONLY ADD WHAT IS USED IN PAPERS!!!)
-| v |- Section 1: Telescopes (ZTF, NOT, GTC, others used throughout the thesis)
-| v |- Section 2: General considerations (Loc, tel, inst, det)
-| v |- Section 3: Image types (includes calibrations)
+| V |- Section 1: Telescopes (ZTF, NOT, GTC, others used throughout the thesis)
+| V |- Section 2: General considerations (Loc, tel, inst, det)
+| V |- Section 3: Image types (includes calibrations)
 |   |             Keep to only to phot / spec
 |   |             (pol used as example above but not used so no explanation needed)
-| v |- Section 4: Reduction (Use calibs from above and explain step by step why)
-| X |- Section  : Difference imaging (Check ZTF & autophot how they do it, ZOGY) --> into FP section
-| w |- Section 5: Forced photometry (FPbot uses psf, look closer into it)
+| V |- Section 4: Reduction (Use calibs from above and explain step by step why)
+| V |- Section 5: Forced photometry (FPbot uses psf, and mention difference imaging)
 | 
 |- Chapter 3: A systematic search for late-time rebrightening
 |   |           Short introduction Add that section X has been extended
-| P |- Paper 1: Add with as little editing as possible
-|       |- Section X: SNAP section, add a snapshot of SNAP
+| V |- Paper 1: Add with as little editing as possible
+| V     |- Section X: SNAP section, add a snapshot of SNAP
 |
 |- Chapter 4: ZTF observed late-time signals of pre-ZTF transients
-| P |- Paper 2: Add as late as possible after feedback from submission process
+| V |- Paper 2: Add as late as possible after feedback from submission process
 |
 |- Chapter 5: A real-time search for Type Ia SNe with late-time CSM interaction in
 |             ZTF
-| v |- Paper 3: Won't be ready in time, adapt directly to thesis
+| V |- Paper 3: Won't be ready in time, adapt directly to thesis
 |               SN 2019zbq: Is it possible to make a host lc to check?
 |
 |- Chapter 6: The next steps
-| v |        Future research to build from this (LSST, other samples)
-| v |        Alternative uses for a pipeline like this (ANT search in nuclei?)
-| v |        Pipeline improvements (Validation check for ANTs if nucleus close)
-| v |        non-pipeline related future research
+| V |        Future research to build from this (LSST, other samples)
+| V |        Alternative uses for a pipeline like this (ANT search in nuclei?)
+| V |        Pipeline improvements (Validation check for ANTs if nucleus close)
+| V |        non-pipeline related future research
 
 
 
@@ -80,16 +79,16 @@ NOTE: List of publications: All papers except the master-related one that I am o
 V Write abstract (1-2 pages)
 V Write dedication
 V Figure out what exact name to put on the cover
-- Write acknowledgement (1 page)
+V Write acknowledgement (1 page)
 V Add references and do a final rewrite of the Observing chapter
 V Check for any left red text and fix them
 V Check chapter introductions and fix them if needed
-- Spell-check (carefully and rigorously)
-- search for the obvious ‘the the’ and check definitions (SN, ZTF) are only defined once per chapter etc.
-- Make sure all citations work properly
+V Spell-check (carefully and rigorously)
+V search for the obvious ‘the the’ and check definitions (SN, ZTF) are only defined once per chapter etc.
+V Make sure all citations work properly
 V Check for double citations and fix
-- Check for any other broken links / references etc.
-- Make sure that the LateX errors and warnings are for nothing important
-- Check with TCD style guide that everything is correct
-- Fix layout for each chapter
-- Final read for last checks
+V Check for any other broken links / references etc.
+V Make sure that the LateX errors and warnings are for nothing important
+V Check with TCD style guide that everything is correct
+V Fix layout for each chapter
+V Final read for last checks
